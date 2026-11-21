@@ -8,4 +8,5 @@ CFLAGS="-O2 -std=c11 -Wall -Iinclude"
 mkdir -p bin
 $CXX $CFLAGS -o bin/test_algebra.exe tests/test_algebra.c src/algebra/hv_binary.c -lm
 $CXX $CFLAGS -o bin/test_ghrr.exe   tests/test_ghrr.c   src/algebra/ghrr.c src/algebra/hv_binary.c -lm
+$CXX $CFLAGS -o bin/test_sdr.exe     tests/test_sdr.c    src/encoding/sdr.c src/algebra/hv_binary.c -lm
 echo BUILT

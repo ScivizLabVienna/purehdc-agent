@@ -28,6 +28,6 @@ end-to-end agent + capacity/interference/hop curves + honest negatives.
 ## Rounds
 - [x] r0 2026-11-21: lane open pre-reg, claim ledger pointer to E17 §1 (same document family; re-verify only items new to v2.0), toolchain bring-up, scaffold, L1 binary algebra + invariant tests.
 - [x] r1 2026-11-21: GHRR m=1/2/4 PASS (G-B suite in tests/test_ghrr.c); G-A incl. M-1 negative recorded.
-- [ ] r2: byte/n-gram SDR encoder (no learned vocab; content-word hashing only) + collision curves.
+- [x] r2 2026-11-21: streaming byte 2/3-gram SDR encoder PASS (order-sensitive 0.75, onechar 0.886); see findings §2.
 - [ ] r3: assoc store L3-lite (C), capacity/RAM/latency tables vs hash-map control.
 - [ ] r4: relational layer + G-C run.  - [ ] r5: gridworld planner + G-D.  - [ ] r6: CLI agent loop + persistence G-E.  - [ ] r7+: ablations, TAM vendor-parity port (L3 full, after E4 R1 anchor), paper draft (tectonic at S:/nativehdc/tools/tectonic.exe; lab-level authors + non-peer-review notice per publication policy).
