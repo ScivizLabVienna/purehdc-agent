@@ -1,0 +1,637 @@
+# PURE-HDC AGENT
+
+## Research and Implementation Specification — v2.0
+
+Objective: Build the smallest scientifically defensible, fully operational agent whose representation, memory, reasoning, planning, and online learning use hyperdimensional computing (HDC) and discrete associative computation.
+
+The goal is not to simulate an LLM using HDC terminology. The goal is to investigate whether a complete, useful agent can emerge from associative memory, compositional algebra, and deterministic control without neural-network training.
+
+Primary requirement: Deliver working code, reproducible experiments, measured performance, and explicit negative results. No pseudocode-only implementations.
+
+* * *
+
+## 1\. NON-NEGOTIABLE CONSTRAINTS
+
+- No transformers, Mamba, RNNs, neural networks, or pretrained embeddings.
+- No backpropagation, gradients, SGD, or neural fine-tuning.
+- No GPU dependency. CPU execution only.
+- No BPE, conventional linguistic tokenizer, or learned vocabulary.
+- No LLM calls, including for planning, adjudication, evaluation-time reasoning, or generation.
+- No hidden neural components introduced through libraries.
+- No symbolic knowledge engine masquerading as HDC reasoning.
+- No external vector database or language model.
+
+Allowed:
+
+- Sparse binary sets (SDR/SHR), XOR binding, permutation, majority bundling.
+- Complex-valued GHRR unitary matrix binding.
+- TAM and other associative-memory structures.
+- Fixed random projections, deterministic hashing, byte n-grams, and feature quantization.
+- Graph search, deterministic state machines, bounded beam search, and explicit tool execution.
+- Lightweight C libraries for arithmetic, file handling, and system interfaces.
+- Python for offline testing, plotting, and experiment orchestration only. The final agent runtime must operate independently of Python.
+
+"No tokens" means no learned linguistic token inventory. Raw bytes, sensor features, sparse indices, and action IDs are permitted as physical input representations.
+
+Every important computation must have a documented HDC or discrete associative interpretation.
+
+## 2\. RESEARCH PRINCIPLES
+
+Separate three categories throughout development:
+
+Established: Results reproduced from published papers or independently passing tests.
+
+Adapted: Published mechanisms modified for this architecture, requiring new validation.
+
+Experimental: Hypotheses with no demonstrated advantage.
+
+Never treat the following as guaranteed:
+
+- Unlimited associative-memory capacity.
+- Constant practical query latency at arbitrary scale.
+- Absence of catastrophic interference.
+- Perfect novelty detection or hallucination prevention.
+- Unlimited context preservation through bundling.
+- General language understanding from fixed random projections.
+- Accurate composition after arbitrary numbers of reasoning hops.
+- Mathematical equivalence between distinct HDC representations.
+
+Record assumptions, dependencies, counterexamples, and failure conditions.
+
+Prefer the smallest working implementation over architectural completeness.
+
+## 3\. CORE ARCHITECTURE
+
+Five layers. Each must expose a minimal C API, test suite, benchmarks, and serialization where applicable.
+
+### L1 — HDC Algebra
+
+Implement two complementary representations.
+
+A. Binary/sparse algebra
+
+- XOR binding for dense binary HVs.
+- Sparse-set operations for SDR/SHR.
+- Majority and weighted bundling.
+- Circular permutation and inverse.
+- Similarity and overlap measurements.
+- Confidence-aware cleanup against stored candidates.
+
+B. Genuine GHRR
+
+- Complex unitary matrices in U(m).
+- Blockwise matrix multiplication for binding.
+- Conjugate-transpose unbinding.
+- Order-sensitive, noncommutative composition.
+- Bundling and similarity in the appropriate matrix space.
+- Explicit handling of the fact that bundled matrices need not remain unitary.
+
+Test m = 1, 2, and 4 before considering larger matrix sizes.
+
+Treat GHRR complexity as O(Dm³) for naive multiplication, or O(D) only when m is fixed.
+
+Define mathematical and software invariants for every operation. Verify invertibility, reconstruction noise, noncommutativity, associativity, and numerical stability.
+
+Do not claim that GHRR binding alone provides full sequence attention. Implement and test an explicit associative attention-like mechanism only if needed.
+
+### L2 — Encoding and Grounding
+
+Represent perception as sparse distributed representations and stable concepts as sparse holographic representations.
+
+Pipeline:
+
+Raw input → deterministic feature extraction → SDR → TAM heteroencoder → stable SHR.
+
+Implement:
+
+- Streaming byte/n-gram encoding without learned tokenization.
+- Numeric and categorical sensor encoding.
+- Relational and temporal feature binding.
+- Novelty detection and concept allocation.
+- Persistent identity mapping.
+- SDR-to-SHR heteroassociation.
+- Explicit conversion interfaces between sparse representations and GHRR.
+
+Critical requirement: Similarity of encoded inputs must not be mistaken for semantic understanding.
+
+Test paraphrases, synonyms, word order, unseen expressions, collisions, and semantic distractors.
+
+If open-domain semantic generalization fails, restrict the initial application to structured language and grounded interaction instead of introducing neural components.
+
+### L3 — Topological Associative Memory
+
+Use Peter Overmann's Topological Associative Memory (TAM) reference implementation as the authoritative starting point.
+
+Adapt and optimize only after reproducing the baseline.
+
+Required API:
+
+tam\_create(...)
+
+tam\_store(...)
+
+tam\_retrieve(...)
+
+tam\_novelty(...)
+
+tam\_stats(...)
+
+tam\_save(...)
+
+tam\_load(...)
+
+tam\_destroy(...)
+
+Investigate deletion, forgetting, and correction separately. Do not assume that irreversible binary writes can be undone safely.
+
+Expose:
+
+- Pattern matching thresholds.
+- Memory density.
+- Retrieval ambiguity.
+- False positives and false negatives.
+- Partial-cue reconstruction.
+- Memory saturation.
+- Actual resident memory consumption.
+
+Performance rule: The published O(P²) query complexity describes the fixed-size query computation, not unlimited error-free storage.
+
+Verify actual memory complexity from the reference implementation before allocating large arrays.
+
+Benchmark memory capacity and retrieval accuracy together, not just query throughput.
+
+Investigate bounded-density memories, partitioning, sharding, and tiering only when the reference implementation demonstrably hits a limit.
+
+### L4 — HDC Reasoning
+
+Implement the following mechanisms in increasing order of difficulty.
+
+1\. Relational reasoning
+
+Represent typed subject-relation-object structures using reversible binding, role identifiers, and associative retrieval.
+
+Demonstrate that direction, role, and identity are preserved.
+
+2\. PathHD-inspired path reasoning
+
+Use GHRR to encode ordered relation paths.
+
+Retrieve candidate paths using HDC similarity and structural constraints.
+
+Replace the published method's final LLM adjudication with an entirely deterministic, evidence-grounded candidate selector.
+
+Test two-hop reasoning first, then three, five, and ten hops.
+
+3\. FactorHD-inspired decomposition
+
+Implement compositional unbinding and candidate cleanup for supported relation and class hierarchies.
+
+Measure reconstruction fidelity, interference, and ambiguity.
+
+Do not assume arbitrary bundled hypervectors can be losslessly factorized.
+
+4\. Analogy and compositional inference
+
+Perform relational transfer through binding and unbinding.
+
+Require identifiable source relations, destination relations, and supporting memory traces.
+
+5\. Uncertainty estimation
+
+Adapt HDUQ principles:
+
+- Distance to best matching prototype.
+- Gap between first and second candidates.
+- Dispersion across independently encoded evidence.
+
+Calibrate abstention thresholds on held-out examples.
+
+Return an explicit UNKNOWN when evidence is insufficient.
+
+UNKNOWN is not a proof of correctness. Measure confidently wrong answers separately.
+
+### L5 — Agent and Control Loop
+
+Implement a bounded, observable loop:
+
+OBSERVE
+
+↓
+
+ENCODE
+
+↓
+
+DETECT NOVELTY
+
+↓
+
+RETRIEVE MEMORY
+
+↓
+
+COMPOSE CANDIDATES
+
+↓
+
+VERIFY CONSTRAINTS
+
+↓
+
+SELECT ACTION
+
+↓
+
+EXECUTE / ABSTAIN
+
+↓
+
+OBSERVE RESULT
+
+↓
+
+STORE NEW ASSOCIATIONS
+
+The controller must support:
+
+- Multiple candidate actions.
+- Tool selection using HDC similarity.
+- Typed action arguments.
+- Explicit safety and validity checks.
+- Bounded retries.
+- State changes.
+- Observation-grounded correction.
+- Episodic and semantic memory separation.
+- Provenance for every retrieved fact and action.
+- Persistence and recovery across restarts.
+
+Use a deterministic scheduler, not a neural policy.
+
+No tool call may be executed solely because its HDC score is high. Arguments, permissions, and preconditions must also be verified.
+
+## 4\. LANGUAGE AND OUTPUT WITHOUT GENERATION MODELS
+
+This is the highest-risk research problem.
+
+Do not assume that TAM retrieval plus unbinding constitutes language generation.
+
+Implement a staged, retrieval-based communication system:
+
+Stage A — Structured responses
+
+Use stored facts, exact relations, and a deterministic renderer.
+
+Stage B — Corpus-grounded phrase retrieval
+
+Associate input patterns with stored output spans. Store the original byte sequences alongside their representations.
+
+The HDC system selects spans; a deterministic decoder reconstructs them. Never claim that an HV alone contains sufficient information to reconstruct arbitrary original text.
+
+Stage C — Constrained compositional responses
+
+Compose retrieved phrases with explicit grammar, type, provenance, and contradiction constraints.
+
+Stage D — Exploratory recombination
+
+An optional muse mode may retrieve and recombine less-obvious associations, but every novel inference must be labeled as a hypothesis rather than an established fact.
+
+Report exact retrieval, semantic correctness, grammar, coverage, novelty, and unsupported-claim rates separately.
+
+Prioritize a working constrained-domain assistant over weak open-domain text imitation.
+
+## 5\. WORLD MODEL AND PLANNING
+
+Build a three-level associative world model.
+
+L0 — State: entities, attributes, observations, and environment configurations.
+
+L1 — Transition: state-action-next-state associations.
+
+L2 — Coherence: constraints, causal consistency checks, and supported relations between transitions.
+
+Predict:
+
+next\_state = retrieve(bind(current\_state, action))
+
+This equation is an experimental retrieval interface, not a guarantee that valid transitions will be reconstructed.
+
+Use bounded beam search over predicted states.
+
+Planning must include:
+
+- Explicit goal representation.
+- Preconditions and postconditions.
+- Contradiction rejection.
+- Unknown-transition handling.
+- Prediction confidence.
+- Replayable action traces.
+- Recovery following unexpected observations.
+
+Test Blocksworld and Gridworld before introducing natural-language planning.
+
+For every plan, distinguish recalled trajectories from genuinely recombined trajectories.
+
+## 6\. HOMOTOPY-INSPIRED EXPERIMENTS
+
+Keep these isolated from the mandatory architecture.
+
+Investigate whether HoTT-inspired concepts yield measurable improvements to HDC reasoning.
+
+Experiment H1 — Structural identity
+
+Test round-trip retrieval, bidirectional associations, and structural equivalence.
+
+Do not equate approximate round-trip retrieval with mathematical univalence.
+
+Experiment H2 — Symmetry-aware ranking
+
+Investigate homotopy-cardinality-inspired scores where an explicit representation of symmetries and proof witnesses exists.
+
+Do not assume one extra TAM query computes homotopy cardinality.
+
+Compare with ordinary similarity, path-length penalties, and candidate-frequency correction.
+
+Experiment H3 — Coherence
+
+Record and check multi-step composition constraints.
+
+GHRR matrix multiplication is associative. Do not implement an "associator correction" unless a specific nonassociative approximation or projection demonstrably requires it.
+
+Experiment H4 — Alternative path retrieval
+
+Retrieve multiple structurally distinct proof or transition paths, and evaluate whether retaining their relationships improves planning accuracy or creative recombination.
+
+Include ablations. Remove any component that contributes complexity without a statistically meaningful advantage.
+
+## 7\. HARDWARE AND IMPLEMENTATION
+
+Target system:
+
+- 128 GB system RAM.
+- CPU-only execution; GPU remains unused.
+- NVMe storage for corpora, snapshots, logs, and optionally cold memory.
+- Reserve at least 28 GB RAM for the OS and other applications.
+- Prefer a conservative 80 GiB working-memory ceiling.
+
+Primary runtime: C11.
+
+CPU optimizations:
+
+- Scalar portable baseline.
+- AVX2 when available.
+- AVX-512 only when CPU support is detected.
+- Threading, locality, tiling, and bit-packed operations.
+- Memory-mapped storage where demonstrated useful.
+
+Do not assume AVX-512 availability from the presence of a powerful GPU.
+
+Use explicit byte-accurate memory calculations.
+
+For TAM, derive storage from its dimensions and actual layout. For dense heteroassociative TAM, evaluate:
+
+bits ≈ N\_A × (N\_A - 1) × N\_B / 2
+
+For full complex GHRR matrices, evaluate:
+
+bytes\_per\_HV = D × m × m × bytes\_per\_complex
+
+For example, D=10,000 and m=4 using complex float32 requires approximately 1.28 MB per HV.
+
+Do not store large collections of such HVs without a demonstrated memory plan.
+
+Start with small dimensions and scale only after capacity measurements.
+
+All throughput, energy consumption, latency, and memory figures must be measured rather than inherited from papers.
+
+## 8\. IMPLEMENTATION ROADMAP — 24-WEEK TARGET
+
+Time estimates are planning targets, not guaranteed completion dates. Advance according to evidence gates.
+
+| Phase | Weeks | Deliverable |
+| --- | --- | --- |
+| A | 1–2 | Algebra, GHRR, invariants, encoders |
+| B | 3–4 | TAM reference reproduction and C integration |
+| C | 5–8 | Grounded retrieval and constrained language interface |
+| D | 9–12 | Relational reasoning, PathHD, decomposition |
+| E | 13–16 | World model and multi-step planning |
+| F | 17–20 | Autonomous tool loop, persistence, recovery |
+| G | 21–24 | Integration, ablations, stress tests, research report |
+
+Required gates:
+
+Gate A: All algebraic properties and inverse operations pass randomized tests. Conversion between representation types is explicitly tested.
+
+Gate B: At least 10,000 stored associations can be queried with measured accuracy, density, latency, and memory usage. Reference correctness is preserved.
+
+Gate C: A constrained-domain question-answering system returns grounded answers, reconstructs source text correctly, and abstains on unknowns.
+
+Gate D: Two- and three-hop inference succeeds on held-out, order-sensitive relational tasks. Every answer exposes its retrieved support.
+
+Gate E: The world model produces valid five-step plans in previously unseen environments and reports failure when transitions are missing.
+
+Gate F: The agent selects tools, validates arguments, corrects failures, and stores the resulting experience without gradient training.
+
+Gate G: End-to-end benchmarks, ablations, memory-capacity curves, and independent reproducibility instructions are complete.
+
+Do not advance simply because the schedule says to.
+
+## 9\. BENCHMARKS
+
+Benchmark against simple, relevant alternatives, not only LLM agents.
+
+Memory: Exact hash lookup, sparse inverted indexing, conventional associative matching.
+
+Retrieval: Lexical/BM25-style retrieval, fixed random projection, HDC baseline without TAM.
+
+Reasoning: Explicit bounded graph traversal, symbolic path search, simple HDC binding.
+
+Planning: Breadth-first search and standard deterministic planning.
+
+Agent: Rule-based tool router and a fixed scripted baseline.
+
+Use small reproducible tasks first.
+
+Later adapt suitable subsets of:
+
+- HotpotQA for two-hop, source-grounded reasoning.
+- BFCL for tool selection and argument validity.
+- ALFWorld for sequential interaction.
+- LoCoMo and LongMemEval for memory behavior.
+
+Explicitly document when benchmark formats or assumptions are incompatible with a retrieval-only architecture.
+
+Report:
+
+- Accuracy and task success.
+- Recall precision and memory interference.
+- Unsupported-answer rate and abstention quality.
+- Novel-task generalization.
+- Latency distributions, not just averages.
+- Stores/second and queries/second.
+- Peak RAM, serialized storage, and CPU utilization.
+- Performance under increasing memory density.
+- Number of reasoning hops before degradation.
+- Results across multiple random seeds.
+
+Ablate each major mechanism: GHRR, TAM, hierarchical memory, uncertainty estimation, decomposition, and coherence constraints.
+
+## 10\. RESEARCH INPUTS
+
+Read and verify the current versions of these sources before implementation.
+
+Core
+
+1. Creating Intelligence — arXiv:2606.31819
+
+   [https://github.com/PeterOvermann/CreatingIntelligence](https://www.google.com/url?q=https://github.com/PeterOvermann/CreatingIntelligence&sa=D&source=editors&ust=1795256961766807&usg=AOvVaw0OYJ1fEuafE4X3qEwoH1cK)
+2. Generalized Holographic Reduced Representations — IEEE Transactions on Artificial Intelligence, 2026
+
+   [https://arxiv.org/abs/2405.09689](https://www.google.com/url?q=https://arxiv.org/abs/2405.09689&sa=D&source=editors&ust=1795256961766953&usg=AOvVaw2l7NzQpS_zXtfuO-dRzz_2)
+3. PathHD — arXiv:2512.09369
+
+   [https://arxiv.org/abs/2512.09369](https://www.google.com/url?q=https://arxiv.org/abs/2512.09369&sa=D&source=editors&ust=1795256961767041&usg=AOvVaw2RkdoF18agN9U1EAKYjput)
+4. FactorHD — arXiv:2507.12366
+
+   [https://arxiv.org/abs/2507.12366](https://www.google.com/url?q=https://arxiv.org/abs/2507.12366&sa=D&source=editors&ust=1795256961767115&usg=AOvVaw3qI9Eo0bBiKsl_Ge44sNzR)
+
+Supporting
+
+5. HDUQ-HAR — Scientific Reports, 2026.
+6. A Homotopy-Type-Theoretic Generalization of Neurosymbolic Inference — arXiv:2606.17851.
+7. Optimal Hyperdimensional Representation for Learning and Cognitive Computation — Frontiers in AI, 2026.
+8. Real-Valued Hyperdimensional Sequence Representations — arXiv:2608.28334.
+9. ScalableHD — arXiv:2506.09282.
+10. hdcstorage — AEUPH, Hugging Face, 2026.
+
+Existing research code
+
+[https://github.com/ScivizLabVienna/nativehdc](https://www.google.com/url?q=https://github.com/ScivizLabVienna/nativehdc&sa=D&source=editors&ust=1795256961767744&usg=AOvVaw3QUp-5-rudvkfcyXK4tznl)
+
+Inspect its research methods, benchmarks, negative results, and associative-memory experiments.
+
+Do not reuse its PyTorch transformer implementation as the basis for a supposedly pure-HDC agent.
+
+Keep the new C implementation clearly separated.
+
+For each paper, extract:
+
+- Exact algorithm.
+- Equations and data representations.
+- Reference implementation.
+- Computational and memory complexity.
+- Hardware and benchmark conditions.
+- Published limitations.
+- Modifications required for a training-free CPU agent.
+
+Never cite a result as proof of a broader claim than the original experiment establishes.
+
+## 11\. CODEBASE AND DELIVERABLES
+
+Suggested structure:
+
+purehdc/
+
+src/
+
+    algebra/
+
+    encoding/
+
+    tam/
+
+    reasoning/
+
+    planning/
+
+    agent/
+
+    io/
+
+include/
+
+tests/
+
+benchmarks/
+
+experiments/
+
+examples/
+
+docs/
+
+Makefile
+
+README.md
+
+RESULTS.md
+
+LIMITATIONS.md
+
+references.bib
+
+Deliver:
+
+1. A compilable C11 runtime with no neural dependencies.
+2. Deterministic test fixtures and repeatable benchmark commands.
+3. A small corpus and a structured world-model demonstration.
+4. A CLI agent with persistent associative memory.
+5. A reproducible example that demonstrates observation, learning, multi-hop inference, planning, and action.
+6. Performance tables and negative-result documentation.
+7. Explicit comparison between what the research predicted and what the implementation achieved.
+
+Use the smallest sensible codebase. A target of ~3,800 lines is desirable but subordinate to correctness, memory safety, and reproducibility.
+
+Never sacrifice tests or necessary interfaces to meet a line count.
+
+## 12\. EXECUTION INSTRUCTIONS
+
+Start by inspecting the referenced papers and existing repositories.
+
+First produce:
+
+1. A dependency and feasibility matrix.
+2. A list of verified versus unsupported claims.
+3. A corrected RAM and complexity model.
+4. The minimum viable end-to-end architecture.
+5. A repository scaffold and the first working C implementation.
+
+Then implement iteratively.
+
+For each feature:
+
+- Write the mathematical specification.
+- Implement the simplest correct version.
+- Run unit and property tests.
+- Compare against a trivial baseline.
+- Measure resource usage.
+- Record results.
+- Optimize only verified bottlenecks.
+- Continue when acceptance criteria pass.
+
+Do not invent benchmark results, APIs, or unavailable reference implementations.
+
+If a proposed mechanism fails, preserve the result, identify the violated assumption, and proceed with the simplest experimentally defensible alternative without violating the architecture constraints.
+
+## 13\. SUCCESS CRITERION
+
+The objective is not to claim AGI or universal intelligence.
+
+The objective is to demonstrate a minimal CPU-only agent that can:
+
+- Ground incoming observations in reusable representations.
+- Learn new associations through one-pass memory updates.
+- Retrieve relevant facts from partial inputs.
+- Compose relations across multiple steps.
+- Distinguish known information from uncertain inference.
+- Predict simple action outcomes.
+- Plan and execute bounded action sequences.
+- Correct behavior using observations.
+- Persist and reuse experience without neural-network training.
+
+The central research question:
+
+Can a system built entirely from HDC algebra, topological associative memory, and bounded deterministic control demonstrate useful, compositional, generalizable agent behavior without neural-network training?
+
+Prove capabilities experimentally. Document limitations precisely. Keep the architecture genuinely HDC-native.
+
+Begin with the smallest complete observe → remember → infer → act → learn loop. Everything else must earn its place through measured improvement.
