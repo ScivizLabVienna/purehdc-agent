@@ -1,0 +1,19 @@
+ok   xor_unbind_exact
+ok   xor_commutative_property
+ok   perm_inverse_bitexact_all_s
+ok   perm_shifts_distinct
+ok   bundle_k1_identity
+ok   bundle_weighted_smoke_finite
+ok   determinism_same_seed_digest
+ok   orthogonality_worst_le_bound
+curve D=1024
+  K=8 xor_superposition_top1=0.0000
+  K=32 xor_superposition_top1=0.0000
+  K=128 xor_superposition_top1=0.0000
+  K=512 xor_superposition_top1=0.0020
+curve D=4096
+  K=8 xor_superposition_top1=0.1250
+  K=32 xor_superposition_top1=0.0312
+  K=128 xor_superposition_top1=0.0000
+  K=512 xor_superposition_top1=0.0039
+G-A PASS (0 fails)

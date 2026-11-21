@@ -10,4 +10,10 @@
 ## §1 Round log
 - 2026-11-21 r0: lane opened by operator paste of spec v2.0 (continuation directive: continuous autonomous rounds, persistent logs, no fabricated progress). Compiler absent -> Zig cc portable to S:/tools ($0). Scaffold + L1 algebra started same round.
 
-## §2 Results tables (append-only; raw artifacts in results/)
+## §2 Rounds r0/r1 measured (2026-11-21)
+- Toolchain: Zig 0.17.1 x86_64-windows at S:/tools/zig-x86_64-windows-0.17.1/ (zig cc = clang, full C11, $0). Pitfalls hit: ziglang index.json key is `tarball` not `url`; git-bash GNU tar treats `S:\...` as remote host (colon) -> extract with python zipfile; M_PI absent under strict c11.
+- G-A binary algebra PASS 8/8 named invariants @D=1024: xor bind/unbind exact, perm inverse bit-exact (all tested shifts), bundle k=1 identity, weighted-bundle smoke, determinism digest, orthogonality worst|sim| <= 4/sqrt(D) over 200 pairs. Determinism x2: ga_run1.txt == ga_run2.txt byte-identical (cmp).
+- G-B GHRR PASS 18/18 over m in {1,2,4} @D=64 blocks: generator unitarity defect <= 4.4e-16, unbind exact inverse RMS<1e-9, associativity fp-stable, commutativity contract (m=1 commutes to fp; m>=2 noncommutes >1e-3), sim(self)=1, digest determinism. Bundled sums non-unitary MEASURED: defect(P)=4.4e-16 vs defect(P+Q)=2.37 -> GHRR bundling must be followed by cleanup/normalization in reasoning layers; recorded per spec requirement.
+- M-1 NEGATIVE (L1 curve): flat XOR-superposition pair-bind memory recall at chance — top1: D=1024 K=8/32/128/512 -> 0.0/0.0/0.0/0.002; D=4096 -> 0.125(3/24 noise)/0.031/0.0/0.004 (chance=1/K). Mechanism: XOR of >=1 uniform HVs is itself uniform-like, so unbinding cannot correlate with the stored item. Consequence: exact-recall substrate must be per-entry store (TAM/lamport index), NOT vector superposition — consistent with E4/E6 lineage; strengthens L3 design choice rather than weakening it. Bundling capacity of MAJORITY type vs K is tested at G-B store gate, not here.
+
+## §3 Results tables (append-only; raw artifacts in results/)
