@@ -18,4 +18,6 @@
 
 - r2 SDR encoder (byte 2/3-grams, k=2 bits/gram hashed): SDR PASS. order_swap Jaccard 0.750 (not bag-of-cue), one-char Jaccard 0.886; identical string Jaccard=1.0 exact. Collision curve degenerate-by-construction (short repeated ids) — honest note: no hash-induced collisions found beyond identical inputs at D=4096 for these corpora.
 
+- r3 G-B STORE GATE PASS: flat-scan per-entry store (value==key sanity) R@1=1.0000 for N={1k,10k,40k} x flip={0,2,5,10%}; 257 B/pattern exact (=formula 2*D/8+1); latency p50 0.004/0.040/0.159 ms at N=1k/10k/40k (p95 <=0.254ms). Exact-digest hashmap control: R@1 1.0 flip-free, 0.0 at ANY noise -> brittleness contrast quantifies where associative tolerance matters. Flat O(N*W) scan fine to ~40k; sharding deferred until measured limit (spec §3 L3 rule honored).
+
 ## §3 Results tables (append-only; raw artifacts in results/)
