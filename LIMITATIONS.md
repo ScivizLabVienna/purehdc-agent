@@ -49,3 +49,17 @@ Every item below is backed by a deterministic run in `results/`.
 12. Stage B–D language (phrase retrieval, constrained composition, muse mode) is not
     implemented; only Stage A deterministic rendering exists. The paper claim set does not
     cover Stages B–D.
+
+## Addendum — rounds r9–r11 (measured)
+13. **GHRR path unbind is right-peel only.** `ghrr_unbind(A,B)=A·Bᴴ` recovers the *last*
+    bound factor; a left-bound path P=R₂R₁S cannot yield S through the current API. The r9
+    selector therefore verifies decode structurally via entity-type check (nearest stored
+    entity sim > 0.9) rather than algebraic round-trip. A general peel is an API gap, not a
+    demonstrated capability.
+14. **Ordered path reasoning has a dimension floor.** At D=64 with 200 chains hop-2 acc
+    collapsed to 0.575; at D=256 with 150 *unique* (relation-pair, start) keys it is 1.0 @
+    cov 1.0. Duplicate keys produce margin-0 ties that a margin gate cannot break — key
+    uniqueness is an architectural precondition of the confidence signal, not an implementation detail.
+15. **An agent's own episodic log is not independent evidence.** Post-hoc substitution of
+    world rows also corrupts what the log proves (r11 self-log arm: cwr 0.5, identical to no
+    gate). Any verification channel must be non-derivable from the retrieval path — see §R6.

@@ -5,10 +5,13 @@ LDLIBS  ?= -lm
 BIN     := bin
 HVCORE  := src/algebra/hv_binary.c
 
-EXPS := bench_store qa_kg gridworld hard_qa adversarial_qa subst_qa cap_curve
+EXPS := bench_store qa_kg gridworld hard_qa adversarial_qa subst_qa cap_curve subst_gates2 path_ghrr
 BINS := $(addprefix $(BIN)/,test_algebra test_ghrr test_sdr purehdc-agent $(EXPS))
 
 all: $(BINS) | $(BIN)
+
+$(BIN)/path_ghrr: experiments/path_ghrr.c src/algebra/ghrr.c $(HVCORE) | $(BIN)
+	$(CC) $(CFLAGS) -o $@ $^ $(LDLIBS)
 
 $(BIN)/test_algebra: tests/test_algebra.c $(HVCORE) | $(BIN)
 	$(CC) $(CFLAGS) -o $@ $^ $(LDLIBS)
@@ -27,7 +30,10 @@ $(BIN):
 test: $(BIN)/test_algebra $(BIN)/test_ghrr $(BIN)/test_sdr
 	./$(BIN)/test_algebra && ./$(BIN)/test_sdr && ./$(BIN)/test_ghrr
 
+demo: all
+	bash examples/demo.sh
+
 clean:
 	rm -rf $(BIN)
 
-.PHONY: all test clean
+.PHONY: all test demo clean

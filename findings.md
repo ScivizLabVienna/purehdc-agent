@@ -35,3 +35,14 @@
 - r11 GATE HEAD-TO-HEAD (r11_gateh2h_run2): substitution regime, 4 arms. margin(.10) cov1.0 cwr up to 1.0 (blind). SELFLOG — episodic log recorded from the same world — IDENTICAL failure (cwr .5): post-hoc corruption corrupts the log's provenance too; replay evidence is NOT independent. Forward+inverse through one XOR store round-trips algebraically → gate cov=0.0 (subst_gates_v1_blind.c kept as evidence). Only non-derivable evidence works: dual-view and environment obs-verify both cov=clean-fraction acc 1.0 cwr 0.
 - r9 GHRR PATHS (r9_ghrrpath_run3): PathHD-style ordered 2-hop paths, D=256 m=2, 150 unique chains. Deterministic selector (margin .02 + entity-type check) replaces LLM adjudication: hop-2 acc 1.0000 cov 1.0 (mean margin .94, min .92). Order carries semantics: correct cue sim 1.0000 vs swapped-relation cue 0.2476. Negatives en route: D=64 too small (acc .575 @200 chains); duplicate (pair,start) keys -> margin-0 ties; ghrr_unbind right-peels only (A·Bᴴ) so left-bound path start-recovery needs a conj-transpose-left variant — recorded API gap, demo verifies via type-check instead. v1 also leaked oracle into gate (fi==i) — fixed, gates now evidence-only.
 ## §3 Results tables (append-only; raw artifacts in results/)
+
+## §4 Predicted vs achieved (spec §11 deliverable 7) — pre-reg verdicts against measurements
+| Pre-registered expectation (E18 §1, commit e896a62) | Measured | Verdict |
+|---|---|---|
+| Unique-key recall R@1 > .95 at D=1024, N=40k | 1.0000 to 81k × D∈{256..2048}, incl 5% noise (r3,r8) | EXCEEDED; ceiling is latency not interference |
+| Margin gate trades coverage for accuracy under channel noise | cwr=0 everywhere, but always-top1 already 1.0 to 12.5% flips (r7) | MIS-PREDICTED: channel noise cannot produce confident errors in binary XOR NN with unique keys; gate value = coverage control only |
+| Single-view margin detects adversarial corruption | cov=1.0, cwr≤0.50 under substitution (r7c); self-log arm identical (r11) | NEGATIVE — published as central result: single-retrieval-path evidence is algebraically blind to substitution; dual independent views fix it by abstention-to-clean-fraction |
+| Compositional planning equals exact solver when transitions fully observed | gap=0 vs BFS oracle full-model; gap .5/max 3 at 15% missing (r5) | MET within stated bounds |
+| Deterministic log replay persists identity across restarts | cross-process ANSWER+ABSTAIN confirmed (r6, demo r12b) | MET at tested N; binary snapshot deferred |
+| Bundled majority recall degrades gracefully | collapses with k; cleanup required (M-1, r1) | NEGATIVE as pre-registered possible outcome — recorded |
+| Ordered path reasoning feasible on GHRR | hop-2 acc=cov=1.0 @D=256 unique keys; D=64 fails (.575) (r9) | MET with a new precondition discovered post-reg: key uniqueness + dimension floor |

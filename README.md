@@ -25,9 +25,12 @@ no external vector DB. Pure C11, CPU-only, deterministic (fixed seeds).
 # any C11 compiler; on this rig: zig cc 0.17
 make CC="zig cc" test          # unit suites
 make CC="zig cc"               # all benchmarks + agent
+make CC="zig cc" demo          # one-command end-to-end demo (spec §11 deliverable 5)
 bash build.sh                  # Windows/MSYS one-shot alternative (verified)
 ./bin/purehdc-agent memory.hlog  # interactive; commands: LEARN s r o | QUERY s r | BYE
 ```
+
+Figures: `python3 scripts/make_figs.py` (stdlib-only) regenerates `figures/*.svg` from committed `results/`.
 
 ## Layout
 

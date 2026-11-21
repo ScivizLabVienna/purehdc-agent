@@ -1,0 +1,4 @@
+BOOT rows=2 symbols=5 log=/tmp/purehdc_demo.hlog
+LEARNED room_1 contains box_a (novelty: symbols new this session are allocated on first sight)
+LEARNED box_a color red (novelty: symbols new this session are allocated on first sight)
+ANSWER room_1 |contains| box_a conf=1.0000 provenance=row0
