@@ -1,0 +1,3 @@
+F|room_1|contains|box_a
+F|box_a|color|red
+F|room_2|contains|box_b

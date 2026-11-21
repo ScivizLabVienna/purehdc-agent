@@ -1,0 +1,4 @@
+BOOT rows=3 symbols=7 log=results/ge_cli_s1.hlog
+ANSWER room_1 |contains| box_a conf=1.0000 provenance=row0
+ANSWER box_a |color| red conf=1.0000 provenance=row1
+ABSTAIN reason=unknown-symbol

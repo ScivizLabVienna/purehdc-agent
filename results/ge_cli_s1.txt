@@ -1,0 +1,6 @@
+BOOT rows=0 symbols=0 log=results/ge_cli_s1.hlog
+LEARNED room_1 contains box_a (novelty: symbols new this session are allocated on first sight)
+LEARNED box_a color red (novelty: symbols new this session are allocated on first sight)
+LEARNED room_2 contains box_b (novelty: symbols new this session are allocated on first sight)
+ANSWER room_1 |contains| box_a conf=1.0000 provenance=row0
+ERR unknown-command (HELP)

@@ -1,0 +1,6 @@
+rc s1=0 s2=0
+session1 answers=1
+session1 abstains=0
+session2 answers(after restart)=2
+G-E PERSISTENCE-PASS
+rc=0
