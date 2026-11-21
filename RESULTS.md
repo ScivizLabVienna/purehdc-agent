@@ -45,6 +45,8 @@ Every experiment carries an *exact* control: hashmap exact-match for retrieval (
 
 ![latency](figures/fig_latency.svg)
 
+**R5b — Seed robustness (`r12a_seedssweep_run1`).** N = 4,000 unique pairs × **8 independent seeds** × D ∈ {256…2048}: clean R@1 mean = min = 1.0000; 5%-noise mean 1.0000; margin-gated confidently-wrong 0.00000 in all 32 cells. The 1.0000 headlines are seed-robust, not lucky draws.
+
 **R6 — When does abstention earn its keep? (`r7_hardqa_run2`, `r7c_subst_run1`) — our central result.**
 (a) *Channel noise*: 8000-fact dense base, D-sweep, cue flips to 12.5%·D: always-top1 accuracy stays **1.000 everywhere**; the margin gate never improves correctness, it only trades coverage for safety (cov 1.0→0.001 as noise grows, acc 1.0, cwr 0.0 throughout; DEV/TEST identical). Binary XOR nearest-neighbour simply cannot be confidently wrong from query noise with unique keys.
 (b) *Substitution corruption*: p_erase ∈ {0,.5,1} of view-A rows replaced by bit-mutated twins carrying decoy values; independent permuted-view B intact:
@@ -82,7 +84,7 @@ All domains are synthetic generators with unique keys by construction; claims ar
 
 ## 8 Reproducibility
 
-`make CC="zig cc" test` builds/runs all suites; `bash build.sh` equivalent on MSYS. Determinism: identical digests across reruns (checked). Artifacts: results/{ga_run1, gb_store_run2, gc_qa_run2, gd_grid_run1, ge_cli_run1, r7_hardqa_run2, r7b_advqa_run1, r7c_subst_run1, r8_capcurve_run2}.txt. Pre-registration `e896a62`; findings log append-only in `findings.md`; limitations enumerated in `LIMITATIONS.md` (12 measured items).
+`make CC="zig cc" test` builds/runs all suites; `bash build.sh` equivalent on MSYS. Determinism: identical digests across reruns (checked). Artifacts: results/{ga_run1, gb_store_run2, gc_qa_run2, gd_grid_run1, ge_cli_run1, r7_hardqa_run2, r7b_advqa_run1, r7c_subst_run1, r8_capcurve_run2, r9_ghrrpath_run3, r11_gateh2h_run2, r12a_seedssweep_run1}.txt. `bash examples/demo.sh` (or `make demo`) reproduces the end-to-end learn→infer→plan→persist→abstain chain with pass/fail assertions. Pre-registration `e896a62`; findings log append-only in `findings.md`; limitations enumerated in `LIMITATIONS.md` (12 measured items).
 
 ## 9 Conclusion
 

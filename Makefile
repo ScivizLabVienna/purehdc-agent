@@ -5,7 +5,7 @@ LDLIBS  ?= -lm
 BIN     := bin
 HVCORE  := src/algebra/hv_binary.c
 
-EXPS := bench_store qa_kg gridworld hard_qa adversarial_qa subst_qa cap_curve subst_gates2 path_ghrr
+EXPS := bench_store qa_kg gridworld hard_qa adversarial_qa subst_qa cap_curve subst_gates2 path_ghrr seeds_sweep
 BINS := $(addprefix $(BIN)/,test_algebra test_ghrr test_sdr purehdc-agent $(EXPS))
 
 all: $(BINS) | $(BIN)

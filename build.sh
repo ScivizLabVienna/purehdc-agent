@@ -17,6 +17,7 @@ $CXX $CFLAGS -o bin/hard_qa.exe         experiments/hard_qa.c     src/tam/store.
 $CXX $CFLAGS -o bin/adversarial_qa.exe experiments/adversarial_qa.c src/tam/store.c src/algebra/hv_binary.c -lm
 $CXX $CFLAGS -o bin/subst_qa.exe     experiments/subst_qa.c      src/tam/store.c src/algebra/hv_binary.c -lm
 $CXX $CFLAGS -o bin/cap_curve.exe     experiments/cap_curve.c       src/tam/store.c src/algebra/hv_binary.c -lm
+$CXX $CFLAGS -o bin/seeds_sweep.exe   experiments/seeds_sweep.c     src/tam/store.c src/algebra/hv_binary.c -lm
 $CXX $CFLAGS -o bin/subst_gates2.exe    experiments/subst_gates2.c      src/tam/store.c src/algebra/hv_binary.c -lm
 $CXX $CFLAGS -o bin/path_ghrr.exe       experiments/path_ghrr.c     src/algebra/ghrr.c src/algebra/hv_binary.c -lm
 echo BUILT
