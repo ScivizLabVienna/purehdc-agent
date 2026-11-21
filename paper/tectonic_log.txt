@@ -1,0 +1,46 @@
+note: Running TeX ...
+Fontconfig error: Cannot load default config file: No such file: (null)
+warning: main.tex:13: Underfull \hbox (badness 10000) in paragraph at lines 13--13
+warning: main.tex:15: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: main.tex:18: Underfull \hbox (badness 1264) in paragraph at lines 17--18
+warning: main.tex:18: Underfull \hbox (badness 10000) in paragraph at lines 17--18
+warning: main.tex:18: Underfull \hbox (badness 10000) in paragraph at lines 17--18
+warning: main.tex:18: Underfull \hbox (badness 5036) in paragraph at lines 17--18
+warning: main.tex:18: Overfull \hbox (24.54253pt too wide) in paragraph at lines 17--18
+warning: main.tex:18: Underfull \hbox (badness 1189) in paragraph at lines 17--18
+warning: main.tex:18: Underfull \hbox (badness 2302) in paragraph at lines 17--18
+warning: main.tex:18: Underfull \hbox (badness 3579) in paragraph at lines 17--18
+warning: main.tex:18: Underfull \hbox (badness 4303) in paragraph at lines 17--18
+warning: main.tex:28: Overfull \hbox (27.54417pt too wide) in paragraph at lines 27--28
+warning: main.tex:38: Underfull \hbox (badness 3240) in paragraph at lines 37--38
+warning: main.tex:49: Overfull \hbox (40.2976pt too wide) in paragraph at lines 48--49
+warning: main.tex:49: Underfull \hbox (badness 3568) in paragraph at lines 49--49
+warning: main.tex:64: Underfull \hbox (badness 10000) in paragraph at lines 63--64
+warning: main.tex:64: Underfull \hbox (badness 10000) in paragraph at lines 63--64
+warning: main.tex:67: Underfull \hbox (badness 5403) in paragraph at lines 66--67
+warning: main.tex:67: Underfull \hbox (badness 1831) in paragraph at lines 66--67
+note: Rerunning TeX because "main.aux" changed ...
+warning: main.tex:13: Underfull \hbox (badness 10000) in paragraph at lines 13--13
+warning: main.tex:15: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: main.tex:18: Underfull \hbox (badness 1264) in paragraph at lines 17--18
+warning: main.tex:18: Underfull \hbox (badness 10000) in paragraph at lines 17--18
+warning: main.tex:18: Underfull \hbox (badness 10000) in paragraph at lines 17--18
+warning: main.tex:18: Underfull \hbox (badness 5036) in paragraph at lines 17--18
+warning: main.tex:18: Overfull \hbox (24.54253pt too wide) in paragraph at lines 17--18
+warning: main.tex:18: Underfull \hbox (badness 1189) in paragraph at lines 17--18
+warning: main.tex:18: Underfull \hbox (badness 2302) in paragraph at lines 17--18
+warning: main.tex:18: Underfull \hbox (badness 3579) in paragraph at lines 17--18
+warning: main.tex:18: Underfull \hbox (badness 4303) in paragraph at lines 17--18
+warning: main.tex:28: Overfull \hbox (27.54417pt too wide) in paragraph at lines 27--28
+warning: main.tex:38: Underfull \hbox (badness 3240) in paragraph at lines 37--38
+warning: main.tex:49: Overfull \hbox (40.2976pt too wide) in paragraph at lines 48--49
+warning: main.tex:49: Underfull \hbox (badness 3568) in paragraph at lines 49--49
+warning: main.tex:64: Underfull \hbox (badness 10000) in paragraph at lines 63--64
+warning: main.tex:64: Underfull \hbox (badness 10000) in paragraph at lines 63--64
+warning: main.tex:67: Underfull \hbox (badness 5403) in paragraph at lines 66--67
+warning: main.tex:67: Underfull \hbox (badness 1831) in paragraph at lines 66--67
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
+note: Running xdvipdfmx ...
+note: downloading cmsy7.pfb
+note: Writing `main.pdf` (69.0419921875 KiB)
+note: Skipped writing 1 intermediate files (use --keep-intermediates to keep them)

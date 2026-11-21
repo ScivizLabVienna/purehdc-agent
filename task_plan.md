@@ -36,7 +36,7 @@ end-to-end agent + capacity/interference/hop curves + honest negatives.
 - [x] r7 2026-11-21: abstention ablations — channel noise benign; substitution defeats single-view margin gate (cwr≤.5); dual view restores cwr=0 (r7a/b/c findings §2). KEY PAPER RESULT.
 - [x] r8 2026-11-21: capacity curve R@1=1.0 to 81k×D2048 no onset + latency linear; Makefile verified; README/LIMITATIONS/references.bib (provenance-gated) + RESULTS.md manuscript draft v1.
 - [x] r9 2026-11-21: GHRR PathHD-style hop-2 PASS acc 1.0 cov 1.0 D=256 m=2; order sensitivity 1.0 vs .248 sim; unbind left-peel API gap logged (findings r9).
-- [~] r10 2026-11-21 PARTIAL: stdlib-SVG figures done (scripts/make_figs.py -> figures/fig_latency.svg, fig_gates.svg; values verified against raw results). DEFERRED: LaTeX/PDF build — no tex toolchain for md here; markdown draft is submission-ready source of truth.
+- [x] r10/r15 2026-11-21 DONE: stdlib-SVG figures (scripts/make_figs.py) + full LaTeX paper paper/main.tex compiled with S:/nativehdc/tools/tectonic.exe -> paper/main.pdf (two-column, pgfplots figures re-keyed to raw artifacts; latency coords corrected against r8 file during review).
 - [x] r9b: RESULTS.md R7 GHRR path row + persistence renumbered R8.
 - [x] r11: gate head-to-head DONE (r11_gateh2h_run2): margin blind; self-log fooled identically; only non-derivable evidence (dual-view / env-verify) works. v1 blind-gate kept as evidence.
 - [~] r12 PARTIAL: r12a seed robustness DONE (8 seeds × 4 D, min R@1 1.0, gated cwr 0). OPEN stretch: TAM vendor-parity port; PDF/submission-format pass.
