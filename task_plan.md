@@ -31,6 +31,11 @@ end-to-end agent + capacity/interference/hop curves + honest negatives.
 - [x] r2 2026-11-21: streaming byte 2/3-gram SDR encoder PASS (order-sensitive 0.75, onechar 0.886); see findings §2.
 - [x] r3 2026-11-21: G-B store gate PASS (R@1=1.0 @40k, 257B/pat, p50<=0.16ms; hashmap brittle under noise). findings §2.
 - [x] r4 2026-11-21: relational layer + G-C PASS (findings §2).
-- [ ] r5: gridworld planner + G-D.
-- [ ] r6: CLI agent loop + persistence G-E.
-- [ ] r7+: ablations, TAM vendor-parity port (L3 full, after E4 R1 anchor), paper draft (tectonic at S:/nativehdc/tools/tectonic.exe; lab-level authors + non-peer-review notice per publication policy).
+- [x] r5 2026-11-21: G-D PASS full gap 0.00 / stress mean_gap 0.50 (findings §2; st_retrieve distinct-key margin fix).
+- [x] r6 2026-11-21: G-E CLI agent PASS — cross-restart log replay, ANSWER+ABSTAIN preserved (ge_cli_run1).
+- [x] r7 2026-11-21: abstention ablations — channel noise benign; substitution defeats single-view margin gate (cwr≤.5); dual view restores cwr=0 (r7a/b/c findings §2). KEY PAPER RESULT.
+- [x] r8 2026-11-21: capacity curve R@1=1.0 to 81k×D2048 no onset + latency linear; Makefile verified; README/LIMITATIONS/references.bib (provenance-gated) + RESULTS.md manuscript draft v1.
+- [ ] r9: GHRR order-sensitive path encoding demo (PathHD-style, deterministic selector replacing LLM adjudication) — closes spec L4.2 checkbox with measurement.
+- [ ] r10: figures via offline Python matplotlib (allowed orchestration-only) + tectonic PDF build (S:/nativehdc/tools/tectonic.exe); lab authors + non-peer-reviewed notice.
+- [ ] r11: forward+inverse agreement gate vs margin gate head-to-head on substitution (E17 survivor fact #2 — expect agreement gate detects what margin misses; single clean table).
+- [ ] r12: TAM vendor-parity port (L3 full, after E4 R1 anchor), paper draft polish + submission-format pass.
