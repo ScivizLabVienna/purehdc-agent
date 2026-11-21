@@ -43,6 +43,8 @@ Every experiment carries an *exact* control: hashmap exact-match for retrieval (
 
 **R5 — Capacity & latency (`r8_capcurve_run2`).** Unique random HV pairs: R@1 = **1.0000 at every measured point to N=81k × D∈{256…2048}**, with and without 5% cue noise. No interference onset is observable in this regime; the binding constraint is O(N·W) scan time: 0.013→1.079 ms per query pair at D=256 and 0.027→3.983 ms at D=2048 (linear, as predicted). Claimed capacity: >81k entries *under these domains*; bundling remains the fragile substrate (M-1).
 
+![latency](figures/fig_latency.svg)
+
 **R6 — When does abstention earn its keep? (`r7_hardqa_run2`, `r7c_subst_run1`) — our central result.**
 (a) *Channel noise*: 8000-fact dense base, D-sweep, cue flips to 12.5%·D: always-top1 accuracy stays **1.000 everywhere**; the margin gate never improves correctness, it only trades coverage for safety (cov 1.0→0.001 as noise grows, acc 1.0, cwr 0.0 throughout; DEV/TEST identical). Binary XOR nearest-neighbour simply cannot be confidently wrong from query noise with unique keys.
 (b) *Substitution corruption*: p_erase ∈ {0,.5,1} of view-A rows replaced by bit-mutated twins carrying decoy values; independent permuted-view B intact:
@@ -54,7 +56,11 @@ Every experiment carries an *exact* control: hashmap exact-match for retrieval (
 | 0.5 | 32 | 0.520 | 1.00 / 0.520 / **0.480** | 0.52 / 1.000 / 0.000 |
 | 1.0 | 8/32 | 0.000 | 1.00 / 0.000 / **1.000** | 0.00 / — / 0.000 (full abstention) |
 
-The first-vs-second margin is *blind* to substitution: the twin scores high, runners-up are random, so τ-gating answers with maximal confidence and maximal error (cwr 0.48–1.00). Two further arms (`r11_gateh2h_run2`) sharpen the boundary: (i) an **episodic self-log** — facts the agent itself recorded at LEARN time — fails *identically* to the margin gate (cov 1.0, cwr 0.5), because post-hoc world corruption retroactively corrupts the evidentiary provenance of everything the agent stored; and (ii) forward+inverse consistency through a single XOR store is algebraically a round-trip (unbind of the retrieved value returns the row's own key), so such self-consistency gates flag nothing (measured coverage 0.0). Only evidence *not derivable from the retrieval path* works: independent permuted-view decoding and environment verification both achieve cov = clean-fraction, acc 1.0000, cwr 0.0000. **Uncertainty in HDC must be evidence-dispersal across independent channels — not single-index rank gaps, and not re-reading your own memory.**
+The first-vs-second margin is *blind* to substitution: the twin scores high, runners-up are random, so τ-gating answers with maximal confidence and maximal error (cwr 0.48–1.00). Two further arms (`r11_gateh2h_run2`) sharpen the boundary:
+
+![gates](figures/fig_gates.svg)
+
+(i) an **episodic self-log** — facts the agent itself recorded at LEARN time — fails *identically* to the margin gate (cov 1.0, cwr 0.5), because post-hoc world corruption retroactively corrupts the evidentiary provenance of everything the agent stored; and (ii) forward+inverse consistency through a single XOR store is algebraically a round-trip (unbind of the retrieved value returns the row's own key), so such self-consistency gates flag nothing (measured coverage 0.0). Only evidence *not derivable from the retrieval path* works: independent permuted-view decoding and environment verification both achieve cov = clean-fraction, acc 1.0000, cwr 0.0000. **Uncertainty in HDC must be evidence-dispersal across independent channels — not single-index rank gaps, and not re-reading your own memory.**
 
 **R7 — GHRR ordered path reasoning (`r9_ghrrpath_run3`).** PathHD-style 2-hop chains encoded as left-ordered matrix products P = R₂R₁S (D=256, m=2), retrieved by NN + margin gate + entity-type check — a fully deterministic selector in place of the published method's LLM adjudication: accuracy **1.0000 at coverage 1.0** (mean margin 0.94, min 0.92 over 150 chains); relation-order semantics quantified: correct cue sim 1.0000 vs swapped-relation cue 0.2476.
 
