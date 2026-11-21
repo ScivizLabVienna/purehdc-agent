@@ -20,4 +20,6 @@
 
 - r3 G-B STORE GATE PASS: flat-scan per-entry store (value==key sanity) R@1=1.0000 for N={1k,10k,40k} x flip={0,2,5,10%}; 257 B/pattern exact (=formula 2*D/8+1); latency p50 0.004/0.040/0.159 ms at N=1k/10k/40k (p95 <=0.254ms). Exact-digest hashmap control: R@1 1.0 flip-free, 0.0 at ANY noise -> brittleness contrast quantifies where associative tolerance matters. Flat O(N*W) scan fine to ~40k; sharding deferred until measured limit (spec §3 L3 rule honored).
 
+- r4 G-C RELATIONAL QA PASS: chain-KG unique-key retrieval, hop-wise store_acc=1.0000 for ALL hops 1..10 == exact-symbolic hash ceiling (margin of zero), random floor 0.002. Architecture detail: per-hop decode-to-nearest-entity (re-normalization) prevents noise compounding across hops — required, raw HV chaining would degrade. Direction check rel-swap sim -0.02 (distinguishable); XOR commutes by design (honest note; noncommutativity lives in GHRR arm G-B). Abstention calibration on nonexistent edges: tau=0.05 -> confidently-wrong 0.0%, abstain 100%. CAVEAT for r5+: chain is unique-key easy-mode; distractor/multi-value arms pending.
+
 ## §3 Results tables (append-only; raw artifacts in results/)

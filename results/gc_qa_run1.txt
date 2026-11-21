@@ -1,0 +1,21 @@
+measure rel_swap_key_sim=-0.0215
+ok   direction_rel_swap_distinguishable
+measure bind_noncommute_sim=1.0000
+hop	store_acc	hash_acc	random_floor	(hop2 detail below)
+1	1.0000	1.0000	0.0020
+2	1.0000	1.0000	0.0020
+3	1.0000	1.0000	0.0020
+4	1.0000	1.0000	0.0020
+5	1.0000	1.0000	0.0020
+6	1.0000	1.0000	0.0020
+7	1.0000	1.0000	0.0020
+8	1.0000	1.0000	0.0020
+9	1.0000	1.0000	0.0020
+10	1.0000	1.0000	0.0020
+abstain_tau=0.02  confidently_wrong_rate=0.1450  abstain_rate=0.8550
+abstain_tau=0.05  confidently_wrong_rate=0.0000  abstain_rate=1.0000
+abstain_tau=0.10  confidently_wrong_rate=0.0000  abstain_rate=1.0000
+abstain_tau=0.15  confidently_wrong_rate=0.0000  abstain_rate=1.0000
+abstain_tau=0.20  confidently_wrong_rate=0.0000  abstain_rate=1.0000
+QC-PASS (0 fails)
+rc=0
