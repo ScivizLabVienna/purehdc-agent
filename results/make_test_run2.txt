@@ -1,0 +1,60 @@
+zig cc -O2 -std=c11 -Wall -Iinclude -o bin/test_algebra tests/test_algebra.c src/algebra/hv_binary.c -lm
+zig cc -O2 -std=c11 -Wall -Iinclude -o bin/test_ghrr tests/test_ghrr.c src/algebra/ghrr.c src/algebra/hv_binary.c -lm
+zig cc -O2 -std=c11 -Wall -Iinclude -o bin/test_sdr tests/test_sdr.c src/encoding/sdr.c src/algebra/hv_binary.c -lm
+./bin/test_algebra && ./bin/test_sdr && ./bin/test_ghrr
+ok   xor_unbind_exact
+ok   xor_commutative_property
+ok   perm_inverse_bitexact_all_s
+ok   perm_shifts_distinct
+ok   bundle_k1_identity
+ok   bundle_weighted_smoke_finite
+ok   determinism_same_seed_digest
+ok   orthogonality_worst_le_bound
+curve D=1024
+  K=8 xor_superposition_top1=0.0000
+  K=32 xor_superposition_top1=0.0000
+  K=128 xor_superposition_top1=0.0000
+  K=512 xor_superposition_top1=0.0020
+curve D=4096
+  K=8 xor_superposition_top1=0.1250
+  K=32 xor_superposition_top1=0.0312
+  K=128 xor_superposition_top1=0.0000
+  K=512 xor_superposition_top1=0.0039
+G-A PASS (0 fails)
+ok   identical_string_jaccard_1
+ok   empty_string_empty_sdr
+ok   determinism_encode_twice
+measure order_swap_jaccard=0.7500 (expected <1 due to boundary n-grams)
+ok   order_sensitive
+measure onechar_near_jaccard=0.8857
+ok   onechar_high_not_one
+curve alen=4 ids=200 distinct_sdr_collisions=174
+curve alen=3 ids=200 distinct_sdr_collisions=192
+curve alen=2 ids=200 distinct_sdr_collisions=198
+ok   gram_count_smoke
+SDR PASS (0 fails)
+== m=1 ==
+ok   unitary_generator_m1
+ok   unbind_exact_inverse_m1
+ok   associative_fp_m1
+ok   commutativity_contract_m1
+ok   sim_self_one_m1
+ok   determinism_digest_m1
+== m=2 ==
+ok   unitary_generator_m2
+ok   unbind_exact_inverse_m2
+ok   associative_fp_m2
+ok   commutativity_contract_m2
+ok   sim_self_one_m2
+ok   determinism_digest_m2
+== m=4 ==
+ok   unitary_generator_m4
+ok   unbind_exact_inverse_m4
+ok   associative_fp_m4
+ok   commutativity_contract_m4
+ok   sim_self_one_m4
+ok   determinism_digest_m4
+measure unitarity: generators=4.441e-16 bundle=2.365e+00
+ok   bundle_defect_recorded
+G-B PASS (0 fails)
+rc=0

@@ -16,4 +16,5 @@ $CXX $CFLAGS -o bin/purehdc-agent.exe  src/agent/main.c          src/tam/store.c
 $CXX $CFLAGS -o bin/hard_qa.exe         experiments/hard_qa.c     src/tam/store.c src/algebra/hv_binary.c -lm
 $CXX $CFLAGS -o bin/adversarial_qa.exe experiments/adversarial_qa.c src/tam/store.c src/algebra/hv_binary.c -lm
 $CXX $CFLAGS -o bin/subst_qa.exe     experiments/subst_qa.c      src/tam/store.c src/algebra/hv_binary.c -lm
+$CXX $CFLAGS -o bin/cap_curve.exe     experiments/cap_curve.c       src/tam/store.c src/algebra/hv_binary.c -lm
 echo BUILT

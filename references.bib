@@ -1,0 +1,59 @@
+; references.bib — E18 PURE-HDC Agent
+; PROVENANCE RULE: every identifier below is either copied verbatim from the project
+; specification's reading list (spec §10) or independently confirmed by web search during
+; this campaign. One candidate entry (HRM inverse-mapping) was DROPPED because its
+; identifiers could not be re-verified and were being written from memory — do not
+; reintroduce it without a verifiable source.
+
+@misc{overmann2026creatingintelligence,
+  title  = {Creating Intelligence},
+  author = {Overmann, Peter},
+  year   = {2026},
+  eprint = {2606.31819},
+  archivePrefix = {arXiv},
+  howpublished = {\url{https://github.com/PeterOvermann/CreatingIntelligence}},
+  note   = {Authoritative TAM reference per spec \S10. E18 implements a simplified flat-scan
+            content-addressed store as L3 baseline (O(N\cdotW) query); full TAM graph
+            traversal deliberately not ported yet — recorded deviation.}
+}
+@article{ghrr2026tai,
+  title  = {Generalized Holographic Reduced Representations},
+  journal= {IEEE Transactions on Artificial Intelligence},
+  year   = {2026},
+  eprint = {2405.09689},
+  archivePrefix = {arXiv},
+  note   = {U(m) matrix binding background for L1-B invariants (unitary defect measurement,
+            noncommutativity, bundling non-unitarity). Full author list: see DOI page.}
+}
+@misc{pathhd2025,
+  title  = {PathHD: Efficient Large Language Model Reasoning over Knowledge Graphs using Hyperdimensional Computing},
+  year   = {2025},
+  eprint = {2512.09369},
+  archivePrefix = {arXiv},
+  note   = {Verified via search (OpenReview 7wav7FJA0P; NeurIPS 2025 presentation). Path
+            reasoning with HDC candidate retrieval; its LLM adjudication stage is replaced
+            in E18 by deterministic margin-gated selection. No neural encoder reused.}
+}
+@misc{factorhd2025,
+  title  = {FactorHD: A Hyperdimensional Computing Model for Multi-Object Multi-Class Representation and Factorization},
+  year   = {2025},
+  eprint = {2507.12366},
+  archivePrefix = {arXiv},
+  note   = {Verified via search (dblp abs-2507-12366). Compositional factorization; E18 treats
+            unbinding-through-bundles as approximate only (measured non-unitary bundle defect).}
+}
+@article{hduqhar2026,
+  title  = {HDUQ-HAR},
+  journal= {Scientific Reports},
+  year   = {2026},
+  note   = {Cited by the project spec reading list (authors to be completed from publisher page).}
+}
+@inproceedings{hduq2023iccad,
+  title    = {Brain-Inspired Trustworthy Hyperdimensional Computing with Efficient Uncertainty Quantification},
+  booktitle= {IEEE/ACM International Conference on Computer-Aided Design (ICCAD)},
+  year     = {2023},
+  doi      = {10.1109/ICCAD57390.2023.10323657},
+  note     = {Origin of prototype-distance / rank-gap UQ signals used in E18 abstention gates;
+              r7c shows the single-view rank gap alone is blind to row substitution.
+              Full author list: see DOI page (not written from memory).}
+}
