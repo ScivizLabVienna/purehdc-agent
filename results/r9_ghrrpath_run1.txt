@@ -1,0 +1,8 @@
+r9 GHRR PATHS: D=64 m=2 chains=200
+hop2 NN retrieval acc          = 0.5750  (correct ordered path found)
+mean retrieval margin          = 0.2394  min margin = 0.0000
+order-sensitivity: swapped-cue misretrieval rate = 0.5750 (want high => order carries semantics)
+exact unbind sim(C^, stored end) = -0.034859  (want ~1)
+wrong-order vs right-order frob diff = 0.856 (nonzero => noncommutativity semantic)
+G-R9 PATHS FAIL
+rc=0
