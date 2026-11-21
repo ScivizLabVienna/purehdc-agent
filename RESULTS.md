@@ -56,7 +56,9 @@ Every experiment carries an *exact* control: hashmap exact-match for retrieval (
 
 The first-vs-second margin is *blind* to substitution: the twin scores high, runners-up are random, so τ-gating answers with maximal confidence and maximal error (cwr 0.48–1.00). Two further arms (`r11_gateh2h_run2`) sharpen the boundary: (i) an **episodic self-log** — facts the agent itself recorded at LEARN time — fails *identically* to the margin gate (cov 1.0, cwr 0.5), because post-hoc world corruption retroactively corrupts the evidentiary provenance of everything the agent stored; and (ii) forward+inverse consistency through a single XOR store is algebraically a round-trip (unbind of the retrieved value returns the row's own key), so such self-consistency gates flag nothing (measured coverage 0.0). Only evidence *not derivable from the retrieval path* works: independent permuted-view decoding and environment verification both achieve cov = clean-fraction, acc 1.0000, cwr 0.0000. **Uncertainty in HDC must be evidence-dispersal across independent channels — not single-index rank gaps, and not re-reading your own memory.**
 
-**R7 — Persistence.** Two-session CLI test (`ge_cli_run1`): fresh process replays append-only log (identical seed + interning order), answers both known queries with provenance, still abstains on the never-learned one.
+**R7 — GHRR ordered path reasoning (`r9_ghrrpath_run3`).** PathHD-style 2-hop chains encoded as left-ordered matrix products P = R₂R₁S (D=256, m=2), retrieved by NN + margin gate + entity-type check — a fully deterministic selector in place of the published method's LLM adjudication: accuracy **1.0000 at coverage 1.0** (mean margin 0.94, min 0.92 over 150 chains); relation-order semantics quantified: correct cue sim 1.0000 vs swapped-relation cue 0.2476.
+
+**R8 — Persistence.** Two-session CLI test (`ge_cli_run1`): fresh process replays append-only log (identical seed + interning order), answers both known queries with provenance, still abstains on the never-learned one.
 
 ## 5 Negative results (first-class)
 

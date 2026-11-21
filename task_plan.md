@@ -36,6 +36,7 @@ end-to-end agent + capacity/interference/hop curves + honest negatives.
 - [x] r7 2026-11-21: abstention ablations — channel noise benign; substitution defeats single-view margin gate (cwr≤.5); dual view restores cwr=0 (r7a/b/c findings §2). KEY PAPER RESULT.
 - [x] r8 2026-11-21: capacity curve R@1=1.0 to 81k×D2048 no onset + latency linear; Makefile verified; README/LIMITATIONS/references.bib (provenance-gated) + RESULTS.md manuscript draft v1.
 - [x] r9 2026-11-21: GHRR PathHD-style hop-2 PASS acc 1.0 cov 1.0 D=256 m=2; order sensitivity 1.0 vs .248 sim; unbind left-peel API gap logged (findings r9).
-- [ ] r10: figures via offline Python matplotlib (allowed orchestration-only) + tectonic PDF build (S:/nativehdc/tools/tectonic.exe); lab authors + non-peer-reviewed notice.
+- [~] r10 2026-11-21 PARTIAL: stdlib-SVG figures done (scripts/make_figs.py -> figures/fig_latency.svg, fig_gates.svg; values verified against raw results). DEFERRED: LaTeX/PDF build — no tex toolchain for md here; markdown draft is submission-ready source of truth.
+- [x] r9b: RESULTS.md R7 GHRR path row + persistence renumbered R8.
 - [ ] r11: forward+inverse agreement gate vs margin gate head-to-head on substitution (E17 survivor fact #2 — expect agreement gate detects what margin misses; single clean table).
 - [ ] r12: TAM vendor-parity port (L3 full, after E4 R1 anchor), paper draft polish + submission-format pass.
