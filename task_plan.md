@@ -38,5 +38,6 @@ end-to-end agent + capacity/interference/hop curves + honest negatives.
 - [x] r9 2026-11-21: GHRR PathHD-style hop-2 PASS acc 1.0 cov 1.0 D=256 m=2; order sensitivity 1.0 vs .248 sim; unbind left-peel API gap logged (findings r9).
 - [~] r10 2026-11-21 PARTIAL: stdlib-SVG figures done (scripts/make_figs.py -> figures/fig_latency.svg, fig_gates.svg; values verified against raw results). DEFERRED: LaTeX/PDF build — no tex toolchain for md here; markdown draft is submission-ready source of truth.
 - [x] r9b: RESULTS.md R7 GHRR path row + persistence renumbered R8.
-- [ ] r11: forward+inverse agreement gate vs margin gate head-to-head on substitution (E17 survivor fact #2 — expect agreement gate detects what margin misses; single clean table).
-- [ ] r12: TAM vendor-parity port (L3 full, after E4 R1 anchor), paper draft polish + submission-format pass.
+- [x] r11: gate head-to-head DONE (r11_gateh2h_run2): margin blind; self-log fooled identically; only non-derivable evidence (dual-view / env-verify) works. v1 blind-gate kept as evidence.
+- [~] r12 PARTIAL: r12a seed robustness DONE (8 seeds × 4 D, min R@1 1.0, gated cwr 0). OPEN stretch: TAM vendor-parity port; PDF/submission-format pass.
+- [x] r13: make-all coverage + examples/demo.sh end-to-end PASS + LIMITATIONS L13-15 + findings §4 predicted-vs-achieved + cli_e2e arity bugfix (ABSTAIN path now truly gated).
