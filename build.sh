@@ -11,4 +11,5 @@ $CXX $CFLAGS -o bin/test_ghrr.exe   tests/test_ghrr.c   src/algebra/ghrr.c src/a
 $CXX $CFLAGS -o bin/test_sdr.exe     tests/test_sdr.c    src/encoding/sdr.c src/algebra/hv_binary.c -lm
 $CXX $CFLAGS -o bin/bench_store.exe  experiments/bench_store.c src/tam/store.c src/algebra/hv_binary.c -lm
 $CXX $CFLAGS -o bin/qa_kg.exe        experiments/qa_kg.c    src/tam/store.c src/algebra/hv_binary.c -lm
+$CXX $CFLAGS -o bin/gridworld.exe      experiments/gridworld.c   src/tam/store.c src/algebra/hv_binary.c -lm
 echo BUILT

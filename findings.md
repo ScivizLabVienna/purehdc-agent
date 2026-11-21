@@ -22,4 +22,7 @@
 
 - r4 G-C RELATIONAL QA PASS: chain-KG unique-key retrieval, hop-wise store_acc=1.0000 for ALL hops 1..10 == exact-symbolic hash ceiling (margin of zero), random floor 0.002. Architecture detail: per-hop decode-to-nearest-entity (re-normalization) prevents noise compounding across hops — required, raw HV chaining would degrade. Direction check rel-swap sim -0.02 (distinguishable); XOR commutes by design (honest note; noncommutativity lives in GHRR arm G-B). Abstention calibration on nonexistent edges: tau=0.05 -> confidently-wrong 0.0%, abstain 100%. CAVEAT for r5+: chain is unique-key easy-mode; distractor/multi-value arms pending.
 
+- r5 G-D WORLD-MODEL PLANNING PASS: 8x8 grid, transitions learned one-pass from 40k-step random-walk replay (bind(state,action)->next_state rows). Planner = BFS over predicted successors ONLY (budget<=|S| by construction), prune on margin<0.02 or decode-conf<0.85 -> fail=UNKNOWN. Arms: full model success 1.000 mean_gap 0.00 max_gap 0; stress model (15% keys absent) success 1.000 mean_gap 0.50 max_gap 3 = recombination via detours on novel (start,goal) pairs never replayed. Oracle = exact symbolic BFS lengths.
+- r5 DESIGN PITFALL (fixed before first run): flat-store margin must be top1 vs DISTINCT-key second-best; naive top2 counts duplicate rows of same key -> margin 0 -> all pruned. Duplicate evidence != competition. bench_store+qa re-run after fix: no regressions (gb_store_run2, gc_qa_run2 identical accuracies).
+
 ## §3 Results tables (append-only; raw artifacts in results/)

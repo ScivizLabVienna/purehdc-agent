@@ -1,0 +1,16 @@
+N=1000  RAM=0.25 MB  257 B/pattern (formula 2*D/8+1)
+flip=0.00  store R@1=1.0000  hashmap_exact R@1=1.0000  p50=0.008ms p95=0.011ms
+flip=0.02  store R@1=1.0000  hashmap_exact R@1=0.0000  p50=0.009ms p95=0.010ms
+flip=0.05  store R@1=1.0000  hashmap_exact R@1=0.0000  p50=0.009ms p95=0.011ms
+flip=0.10  store R@1=1.0000  hashmap_exact R@1=0.0000  p50=0.009ms p95=0.011ms
+N=10000  RAM=2.45 MB  257 B/pattern (formula 2*D/8+1)
+flip=0.00  store R@1=1.0000  hashmap_exact R@1=1.0000  p50=0.084ms p95=0.114ms
+flip=0.02  store R@1=1.0000  hashmap_exact R@1=0.0000  p50=0.084ms p95=0.115ms
+flip=0.05  store R@1=1.0000  hashmap_exact R@1=0.0000  p50=0.084ms p95=0.114ms
+flip=0.10  store R@1=1.0000  hashmap_exact R@1=0.0000  p50=0.084ms p95=0.115ms
+N=40000  RAM=9.80 MB  257 B/pattern (formula 2*D/8+1)
+flip=0.00  store R@1=1.0000  hashmap_exact R@1=1.0000  p50=0.360ms p95=0.537ms
+flip=0.02  store R@1=1.0000  hashmap_exact R@1=0.0000  p50=0.346ms p95=0.481ms
+flip=0.05  store R@1=1.0000  hashmap_exact R@1=0.0000  p50=0.360ms p95=0.487ms
+flip=0.10  store R@1=1.0000  hashmap_exact R@1=0.0000  p50=0.353ms p95=0.459ms
+rc=0

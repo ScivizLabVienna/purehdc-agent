@@ -30,4 +30,7 @@ end-to-end agent + capacity/interference/hop curves + honest negatives.
 - [x] r1 2026-11-21: GHRR m=1/2/4 PASS (G-B suite in tests/test_ghrr.c); G-A incl. M-1 negative recorded.
 - [x] r2 2026-11-21: streaming byte 2/3-gram SDR encoder PASS (order-sensitive 0.75, onechar 0.886); see findings §2.
 - [x] r3 2026-11-21: G-B store gate PASS (R@1=1.0 @40k, 257B/pat, p50<=0.16ms; hashmap brittle under noise). findings §2.
-- [ ] r4: relational layer + G-C run.  - [ ] r5: gridworld planner + G-D.  - [ ] r6: CLI agent loop + persistence G-E.  - [ ] r7+: ablations, TAM vendor-parity port (L3 full, after E4 R1 anchor), paper draft (tectonic at S:/nativehdc/tools/tectonic.exe; lab-level authors + non-peer-review notice per publication policy).
+- [x] r4 2026-11-21: relational layer + G-C PASS (findings §2).
+- [ ] r5: gridworld planner + G-D.
+- [ ] r6: CLI agent loop + persistence G-E.
+- [ ] r7+: ablations, TAM vendor-parity port (L3 full, after E4 R1 anchor), paper draft (tectonic at S:/nativehdc/tools/tectonic.exe; lab-level authors + non-peer-review notice per publication policy).

@@ -22,13 +22,24 @@ int st_put(store_t *s, const uint64_t *key, const uint64_t *val) {
 }
 
 int st_retrieve(const store_t *s, const uint64_t *query, uint64_t *val_out, double *s0, double *s1) {
-    int b0 = -1, b1 = -1; double sbest = -2.0, second = -2.0;
+    int b0 = -1; double sbest = -2.0;
     for (uint32_t i = 0; i < s->n; i++) {
         double sim = ph_sim(query, s->keys + (size_t)i * s->W, s->D, s->W);
-        if (sim > sbest) { second = sbest; b1 = b0; sbest = sim; b0 = (int)i; }
-        else if (sim > second) { second = sim; b1 = (int)i; }
+        if (sim > sbest) { sbest = sim; b0 = (int)i; }
     }
-    if (s0) *s0 = sbest; if (s1) *s1 = second;
+    /* second-best over rows with DISTINCT key content (duplicates of best row are evidence, not competition) */
+    int b1 = -1; double second = -2.0;
+    if (b0 >= 0) {
+        const uint64_t *kbest = s->keys + (size_t)b0 * s->W;
+        for (uint32_t i = 0; i < s->n; i++) {
+            if (i == (uint32_t)b0) continue;
+            const uint64_t *ki = s->keys + (size_t)i * s->W;
+            if (memcmp(ki, kbest, (size_t)s->W * 8) == 0) continue;
+            double sim = ph_sim(query, ki, s->D, s->W);
+            if (sim > second) { second = sim; b1 = (int)i; }
+        }
+    }
+    if (s0) *s0 = sbest; if (s1) *s1 = second; (void)b1;
     if (b0 >= 0 && val_out) memcpy(val_out, s->vals + (size_t)b0 * s->W, (size_t)s->W * 8);
     return b0;
 }
