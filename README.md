@@ -1,6 +1,6 @@
 # PURE-HDC Agent (E18)
 
-**Published**: DOI [10.5281/zenodo.24462796](https://doi.org/10.5281/zenodo.24462796) (v1.0.0, PDF + code bundle) — source repo mirror: https://github.com/ScivizLabVienna/purehdc-agent
+**Published**: v1.0.1 DOI [10.5281/zenodo.24477493](https://doi.org/10.5281/zenodo.24477493) · concept DOI [10.5281/zenodo.24462795](https://doi.org/10.5281/zenodo.24462795) (PDF + code bundle) — source repo mirror: https://github.com/ScivizLabVienna/purehdc-agent
 
 A minimal, fully operational agent built **entirely** from hyperdimensional computing
 (binary HV algebra), a flat-scan topological associative memory, and bounded deterministic
