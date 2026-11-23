@@ -39,5 +39,5 @@ end-to-end agent + capacity/interference/hop curves + honest negatives.
 - [x] r10/r15 2026-11-21 DONE: stdlib-SVG figures (scripts/make_figs.py) + full LaTeX paper paper/main.tex compiled with S:/nativehdc/tools/tectonic.exe -> paper/main.pdf (two-column, pgfplots figures re-keyed to raw artifacts; latency coords corrected against r8 file during review).
 - [x] r9b: RESULTS.md R7 GHRR path row + persistence renumbered R8.
 - [x] r11: gate head-to-head DONE (r11_gateh2h_run2): margin blind; self-log fooled identically; only non-derivable evidence (dual-view / env-verify) works. v1 blind-gate kept as evidence.
-- [~] r12 PARTIAL: r12a seed robustness DONE (8 seeds × 4 D, min R@1 1.0, gated cwr 0). OPEN stretch: TAM vendor-parity port; PDF/submission-format pass.
+- [x] PUBLISHED: DOI 10.5281/zenodo.24462796 + github.com/ScivizLabVienna/purehdc-agent (round 16). Only open stretch item left: TAM vendor-parity port.
 - [x] r13: make-all coverage + examples/demo.sh end-to-end PASS + LIMITATIONS L13-15 + findings §4 predicted-vs-achieved + cli_e2e arity bugfix (ABSTAIN path now truly gated).
