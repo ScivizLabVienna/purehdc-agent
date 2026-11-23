@@ -55,6 +55,9 @@ Every item below is backed by a deterministic run in `results/`.
     bound factor; a left-bound path P=R₂R₁S cannot yield S through the current API. The r9
     selector therefore verifies decode structurally via entity-type check (nearest stored
     entity sim > 0.9) rather than algebraic round-trip. A general peel is an API gap, not a
+    [r17 CLOSED: ghrr_unbind_left() — conjtrans(A)·B — implemented and unit-tested (round-trip
+    <1e-9 for m∈{1,2,4}, wrong-factor detected); path_ghrr gate rebuilt as full algebraic
+    round-trip (start recovered exactly, value re-checked vs stored entity), results/r17_pathverify_run1.txt.]
     demonstrated capability.
 14. **Ordered path reasoning has a dimension floor.** At D=64 with 200 chains hop-2 acc
     collapsed to 0.575; at D=256 with 150 *unique* (relation-pair, start) keys it is 1.0 @

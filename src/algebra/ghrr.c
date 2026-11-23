@@ -105,6 +105,23 @@ void ghrr_unbind(ghrr_t *out, const ghrr_t *A, const ghrr_t *B) {
             }
 }
 
+/* out = conjtrans(A) · B: (r,c) = sum_k conj(A[k,r]) * B[k,c] */
+void ghrr_unbind_left(ghrr_t *out, const ghrr_t *A, const ghrr_t *B) {
+    const uint32_t m = A->m;
+    for (uint32_t d = 0; d < A->D; d++)
+        for (uint32_t r = 0; r < m; r++)
+            for (uint32_t c = 0; c < m; c++) {
+                double sr = 0, si = 0;
+                for (uint32_t k = 0; k < m; k++) {
+                    size_t a_ = bi(m,d,k,r), b_ = bi(m,d,k,c);
+                    double ar = A->v[a_], ai = A->v[a_+1], br = B->v[b_], bi2 = B->v[b_+1];
+                    sr += ar*br + ai*bi2;                       /* conj(A)*B */
+                    si += ar*bi2 - ai*br;
+                }
+                out->v[bi(m,d,r,c)] = sr; out->v[bi(m,d,r,c)+1] = si;
+            }
+}
+
 void ghrr_bundle(ghrr_t *out, const ghrr_t **items, uint32_t k) {
     size_t n = (size_t)out->D * out->m * out->m * 2u;
     memset(out->v, 0, n * sizeof(double));

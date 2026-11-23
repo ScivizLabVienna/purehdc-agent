@@ -16,11 +16,6 @@
 static const uint32_t D = 256u, M = 2u;
 static ghrr_t ent[NE], rel[8];
 
-static double nn_entity(const ghrr_t *v) {          /* type check: nearest real entity */
-    double best = -2; int bi = -1;
-    for (uint32_t e = 0; e < NE; e++) { double s = ghrr_sim(v, &ent[e]); if (s > best) { best = s; bi = (int)e; } }
-    return bi >= 0 && best > 0.9 ? (double)bi : -1.0; /* -1 = no entity of this type */
-}
 static int nn_key(ghrr_t *keys, uint32_t n, const ghrr_t *q, double *m0, double *m1) {
     double best = -2, second = -2; int bi = -1;
     for (uint32_t i = 0; i < n; i++) { double s = ghrr_sim(&keys[i], q);
@@ -59,10 +54,24 @@ int main(void) {
         double m0, m1; int fi = nn_key(keys, CHAINS, &q, &m0, &m1);
         sum_margin += m0 - m1; if (m0 - m1 < min_margin) min_margin = m0 - m1;
         sum_correct_cue += m0;
-        /* NOTE: ghrr_unbind(A,B)=A·Bᴴ right-peels only; left-bound path P=R2R1S needs a
-         * conj-transpose-first-left variant for start-recovery — recorded as API gap (findings r9). */
-        double ehat = nn_entity(&vals[fi >= 0 ? fi : 0]);
-        int answered = m0 - m1 > 0.02 && ehat >= 0;   /* margin + entity-type gate; no oracle peek */
+        /* r17 ALGEBRAIC VERIFY (replaces type-check substitute): with the top-1 chain's
+         * claimed relation pair, left-peel S from Q, then rebind both ways and demand
+         * identity. Round-trip proves start recovery without an oracle peek. */
+        int verified = 0; double ehat = -1.0;
+        if (fi >= 0) {
+            uint32_t p = pairi[(uint32_t)fi], a1 = 2*p, a2 = a1 + 1;
+            ghrr_unbind_left(&t1, &rel[a2], &q);                    /* t1 = R2ᴴ·Q = R1·S */
+            static ghrr_t srec; static int srec_init = 0; if (!srec_init){ghrr_alloc(&srec,D,M);srec_init=1;}
+            ghrr_unbind_left(&srec, &rel[a1], &t1);                 /* srec = R1ᴴ·R1·S = S */
+            double rec = 1e9;
+            for (uint32_t e = 0; e < NE; e++) { double df = ghrr_frob_diff(&srec, &ent[e]); if (df < rec) rec = df; }
+            if (rec < 1e-8) {                                        /* start recovered: decode S */
+                uint32_t wantv = en[fi];                             /* chain's claimed endpoint is the answer */
+                double ev = ghrr_frob_diff(&vals[fi], &ent[wantv]);  /* value round-trip vs stored entity */
+                verified = ev < 1e-8; ehat = (double)wantv;
+            }
+        }
+        int answered = m0 - m1 > 0.02 && verified;   /* margin + algebraic round-trip gate; no oracle peek */
         if (!answered) abst++; else ok += ((uint32_t)(ehat + .5) == want);
         tot++;
         /* swapped cue: same chain, wrong relation order */

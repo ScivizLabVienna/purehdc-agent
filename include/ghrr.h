@@ -19,6 +19,8 @@ void   ghrr_identity(ghrr_t *h);
 void   ghrr_bind(ghrr_t *out, const ghrr_t *A, const ghrr_t *B);
 /* out = A · conjtrans(B)  (unbinding with unitary B is exact up to fp error) */
 void   ghrr_unbind(ghrr_t *out, const ghrr_t *A, const ghrr_t *B);
+/* out = conjtrans(A) · B — peels the LEFT factor A of product A·X (r17) */
+void   ghrr_unbind_left(ghrr_t *out, const ghrr_t *A, const ghrr_t *B);
 /* elementwise sum bundle */
 void   ghrr_bundle(ghrr_t *out, const ghrr_t **items, uint32_t k);
 /* cos-type similarity: sum_d Re tr(A_d B_d^H) / (||A||_F ||B||_F) */

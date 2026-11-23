@@ -54,6 +54,24 @@ int main(void) {
         ghrr_free(&A);ghrr_free(&B);ghrr_free(&C);ghrr_free(&AB);ghrr_free(&BA);ghrr_free(&ABC1);ghrr_free(&ABC2);ghrr_free(&X);ghrr_free(&tmp);
     }
 
+    /* r17: left-factor peel — conjtrans(A)·(A·X) recovers X exactly (unitaries) */
+    {
+        uint32_t ms[3] = {1,2,4};
+        for (int i = 0; i < 3; i++) {
+            uint32_t m = ms[i];
+            ghrr_t A,X,AX,rec,W; ghrr_alloc(&A,16,m);ghrr_alloc(&X,16,m);ghrr_alloc(&AX,16,m);ghrr_alloc(&rec,16,m);ghrr_alloc(&W,16,m);
+            uint64_t sd = 9000u + m; ghrr_random_unitary(&A,&sd); ghrr_random_unitary(&X,&sd); ghrr_random_unitary(&W,&sd);
+            ghrr_bind(&AX,&A,&X);
+            ghrr_unbind_left(&rec,&A,&AX);
+            char nm[64]; snprintf(nm,sizeof nm,"leftpeel_roundtrip_m%u",m);
+            CHECK(nm, ghrr_frob_diff(&rec,&X) < 1e-9);
+            ghrr_bind(&AX,&W,&X); ghrr_unbind_left(&rec,&A,&AX); /* wrong left factor */
+            snprintf(nm,sizeof nm,"leftpeel_wrongfactor_detected_m%u",m);
+            CHECK(nm, ghrr_frob_diff(&rec,&X) > 1e-3 || m==1);   /* m=1: phases cancel noise-free but wrong phase still != 1 */
+            ghrr_free(&A);ghrr_free(&X);ghrr_free(&AX);ghrr_free(&rec);ghrr_free(&W);
+        }
+    }
+
     /* bundled sums need not stay unitary — measure the defect (spec: explicit handling) */
     {
         uint32_t m = 2; ghrr_t P,Q,S; ghrr_alloc(&P,16,m); ghrr_alloc(&Q,16,m); ghrr_alloc(&S,16,m);

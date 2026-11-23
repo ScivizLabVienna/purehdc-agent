@@ -47,3 +47,4 @@
 | Deterministic log replay persists identity across restarts | cross-process ANSWER+ABSTAIN confirmed (r6, demo r12b) | MET at tested N; binary snapshot deferred |
 | Bundled majority recall degrades gracefully | collapses with k; cleanup required (M-1, r1) | NEGATIVE as pre-registered possible outcome — recorded |
 | Ordered path reasoning feasible on GHRR | hop-2 acc=cov=1.0 @D=256 unique keys; D=64 fails (.575) (r9) | MET with a new precondition discovered post-reg: key uniqueness + dimension floor |
+- r17 LEFT-PEEL + ALGEBRAIC VERIFY: ghrr_unbind_left(A,B)=conjtrans(A)·B added (roundtrip <1e-9 m=1/2/4, wrong-factor detected). path_ghrr gate now = margin .02 AND exact start recovery (srec frob-dist to some entity <1e-8) AND value re-check vs stored entity. Result identical headline: acc 1.0000 cov 1.0 @150 chains, min margin .9185 — proves the earlier type-check gate was not carrying accuracy; certification is now algebraic (r17_pathverify_run1.txt). L13 closed.

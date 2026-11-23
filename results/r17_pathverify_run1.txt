@@ -1,0 +1,5 @@
+r9v2 GHRR PATHS: D=256 m=2 chains=150
+hop2 gated acc (answered only)   = 1.0000 over 150 answered of 150 (abstained 0)
+mean margin = 0.9416  min margin = 0.9185
+cue similarity: correct order mean = 1.0000 | swapped order mean = 0.2476 (separation => order carries semantics)
+G-R9 PATHS PASS
