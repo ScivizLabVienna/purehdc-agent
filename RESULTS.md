@@ -1,6 +1,6 @@
 # A Pure Hyperdimensional-Computing Agent: Associative Memory, Compositional Algebra, and Calibrated Abstention Without Neural Training
 
-**Workshop draft — E18 campaign. All numbers in this paper are read directly from deterministic run artifacts in `results/` (git-committed); §Reproducibility maps every table to its file.**
+**E18 technical report. Published DOI [10.5281/zenodo.24462796](https://doi.org/10.5281/zenodo.24462796); code+PDF bundle at that DOI; live mirror https://github.com/ScivizLabVienna/purehdc-agent. All numbers in this paper are read directly from deterministic run artifacts in `results/` (git-committed); §Reproducibility maps every table to its file.**
 *Status: pre-review draft. Author list / affiliations pending; internal policy label per lane convention: preliminary, not peer-reviewed.*
 
 ## Abstract
