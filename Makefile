@@ -27,6 +27,9 @@ $(BIN)/%: experiments/%.c src/tam/store.c $(HVCORE) | $(BIN)
 $(BIN)/test_tambp: tests/test_tambp.c src/store/tam_bitpair.c | $(BIN)
 	$(CC) $(CFLAGS) -Isrc -o $@ $^ $(LDLIBS)
 
+$(BIN)/tamb_store: experiments/tamb_store.c src/store/tam_bitpair.c | $(BIN)
+	$(CC) $(CFLAGS) -Isrc -o $@ $^ $(LDLIBS)
+
 $(BIN):
 	mkdir -p $(BIN)
 

@@ -1,0 +1,6 @@
+tamb_store seed=88172645463393265 p=16 na=nb=512
+N=1000 | tam write 16.0 ms (15.96 us/assoc), read p50 30.0 us p95 43.7 us, B-incl 1.0000 full-contain 1.0000 contam 0.0000 | rebuild 21 ms | flat R@1 1.0000, 43.1 us/query
+N=10000 | tam write 122.3 ms (12.23 us/assoc), read p50 31.5 us p95 51.8 us, B-incl 1.0000 full-contain 1.0000 contam 0.0000 | rebuild 167 ms | flat R@1 1.0000, 378.5 us/query
+N=40000 | tam write 366.1 ms (9.15 us/assoc), read p50 35.9 us p95 63.5 us, B-incl 1.0000 full-contain 1.0000 contam 0.0000 | rebuild 388 ms | flat R@1 1.0000, 1493.1 us/query
+N=100000 | tam write 952.5 ms (9.52 us/assoc), read p50 29.5 us p95 46.4 us, B-incl 1.0000 full-contain 1.0000 contam 0.0235 | rebuild 1125 ms | flat R@1 1.0000, 3776.5 us/query
+TAMB_STORE PASS

@@ -64,3 +64,13 @@
 - tests/test_tambp.c vs exact-lookup oracle (seed 88172645463393265, na=nb=512,p=16): recall FAILS = 0 at N in {1e3,5e3,2e4,5e4,1e5} for exact AND -1/-2/-3 element-deletion queries. Negative control (random queries abstain, Y->p>pb): clean to N=2e4; **22/200 FP @N=5e4, 184/200 @N=1e5** -> measured capacity saturation, matches upstream threshold assumptions' regime limit.
 - Scaling (14-core box, us/read vs flat-scan us/query): 1k: 14 vs 5 | 5k: 27 vs 25 | 20k: 33 vs 100 | 50k: 60 vs 255 | 100k: 54 vs 525. Flat scan linear as expected; bitpair sublinear but NOT constant (14->54us) — table growth/cache effects; claim only measured O-sub-linear speedup ~10x @100k, never "O(1)". RSS <=21 MB. Raw: results/e19_tambp_curve.txt.
 - Caveats logged: no delete support upstream (rebuild required); persistence format not yet implemented; pair-address table upper-bound addr = na(na+1)/2 cells -> naive dense layout O(na^2) impossible for large na (their paged lazy alloc sidesteps); capacity limit is on PAIRS stored, i.e. N*P^2/2 vs na^2/2 — saturates ~N=5e4 here. Next P1b: wire tam_bitpair behind store API as opt-in index + persistence checkpoint; then Clarkson-paper full-text check before wider sweeps.
+
+## E19 r2 — P1b matched-protocol backend comparison (experiments/tamb_store.c)
+Same sparse-set associations/queries for both backends (seed 8817..., p=16, na=nb=512, Q=min(N,2000)).
+N | tam write us/assoc | read p50/p95 us | full-B-contain | contam | rebuild ms | flat-scan R@1 / us-per-query
+1k | 15.96 | 30/43.7 | 1.0000 | 0 | 21 | 1.0000 / 43.1
+10k | 12.23 | 31.5/51.8 | 1.0000 | 0 | 167 | 1.0000 / 378.5
+40k | 9.15 | 35.9/63.5 | 1.0000 | 0 | 388 | 1.0000 / 1493.1
+100k | 9.52 | 29.5/46.4 | 1.0000 | **0.0235** | 1125 | 1.0000 / 3776.5
+Read latency ~flat (~30 us p50) vs scan linear -> **~128x @1e5 on this box** (clock_gettime ms-resolution floor partly masked by loop cost; treat as matched-protocol ratio, not absolute µs). Correct-B full containment holds even at 100k under exact queries, but 2.35% contamination appears -> capacity pressure visible here too (matches P1a FP saturation ≥5e4 in strict negative control). Write ~9 us/assoc; replay-rebuild == write cost, so persistence via append-only episode-log replay is the cheap honest route (no bespoke binary format). Delete = rebuild upstream. Oracle R@1=1 everywhere (gate). Raw: results/e19_tamb_store.txt. RSS not re-measured here (≤21 MB from P1a comparable layout).
+Decision: adopt bit-pair TAM as opt-in index for the agent store via episode-log replay; keep flat scan as verification oracle + fallback for dense patterns (bitpair valid regime = sparse sets; dense ph_random patterns are OUT of regime — do not feed them).
