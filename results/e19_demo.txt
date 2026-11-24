@@ -1,0 +1,10 @@
+[1/4] observe + learn (fresh agent session)
+  OK   learns and answers in-session (confidence+provenance)
+[2/4] multi-hop inference, 10 hops
+  OK   hop-10 accuracy 1.000
+[3/4] planning over one-pass learned transitions
+  OK   planner success 1.00 (full knowledge)
+[4/4] restart: persistent recall + abstain on unknown
+  OK   cross-restart recall
+  OK   abstains on never-learned fact
+DEMO COMPLETE — pure HDC agent: learn → infer → plan → act → persist → abstain, zero neural components.

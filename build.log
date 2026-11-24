@@ -1,0 +1,15 @@
+mkdir -p bin
+zig cc -O2 -std=c11 -Wall -Iinclude -o bin/test_algebra tests/test_algebra.c src/algebra/hv_binary.c -lm
+zig cc -O2 -std=c11 -Wall -Iinclude -o bin/test_ghrr tests/test_ghrr.c src/algebra/ghrr.c src/algebra/hv_binary.c -lm
+zig cc -O2 -std=c11 -Wall -Iinclude -o bin/test_sdr tests/test_sdr.c src/encoding/sdr.c src/algebra/hv_binary.c -lm
+zig cc -O2 -std=c11 -Wall -Iinclude -o bin/purehdc-agent src/agent/main.c src/tam/store.c src/algebra/hv_binary.c -lm
+zig cc -O2 -std=c11 -Wall -Iinclude -o bin/bench_store experiments/bench_store.c src/tam/store.c src/algebra/hv_binary.c -lm
+zig cc -O2 -std=c11 -Wall -Iinclude -o bin/qa_kg experiments/qa_kg.c src/tam/store.c src/algebra/hv_binary.c -lm
+zig cc -O2 -std=c11 -Wall -Iinclude -o bin/gridworld experiments/gridworld.c src/tam/store.c src/algebra/hv_binary.c -lm
+zig cc -O2 -std=c11 -Wall -Iinclude -o bin/hard_qa experiments/hard_qa.c src/tam/store.c src/algebra/hv_binary.c -lm
+zig cc -O2 -std=c11 -Wall -Iinclude -o bin/adversarial_qa experiments/adversarial_qa.c src/tam/store.c src/algebra/hv_binary.c -lm
+zig cc -O2 -std=c11 -Wall -Iinclude -o bin/subst_qa experiments/subst_qa.c src/tam/store.c src/algebra/hv_binary.c -lm
+zig cc -O2 -std=c11 -Wall -Iinclude -o bin/cap_curve experiments/cap_curve.c src/tam/store.c src/algebra/hv_binary.c -lm
+zig cc -O2 -std=c11 -Wall -Iinclude -o bin/subst_gates2 experiments/subst_gates2.c src/tam/store.c src/algebra/hv_binary.c -lm
+zig cc -O2 -std=c11 -Wall -Iinclude -o bin/path_ghrr experiments/path_ghrr.c src/algebra/ghrr.c src/algebra/hv_binary.c -lm
+zig cc -O2 -std=c11 -Wall -Iinclude -o bin/seeds_sweep experiments/seeds_sweep.c src/tam/store.c src/algebra/hv_binary.c -lm

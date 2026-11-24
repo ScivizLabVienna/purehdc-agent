@@ -1,0 +1,12 @@
+ok   identical_string_jaccard_1
+ok   empty_string_empty_sdr
+ok   determinism_encode_twice
+measure order_swap_jaccard=0.7500 (expected <1 due to boundary n-grams)
+ok   order_sensitive
+measure onechar_near_jaccard=0.8857
+ok   onechar_high_not_one
+curve alen=4 ids=200 distinct_sdr_collisions=174
+curve alen=3 ids=200 distinct_sdr_collisions=192
+curve alen=2 ids=200 distinct_sdr_collisions=198
+ok   gram_count_smoke
+SDR PASS (0 fails)

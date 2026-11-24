@@ -41,3 +41,24 @@ end-to-end agent + capacity/interference/hop curves + honest negatives.
 - [x] r11: gate head-to-head DONE (r11_gateh2h_run2): margin blind; self-log fooled identically; only non-derivable evidence (dual-view / env-verify) works. v1 blind-gate kept as evidence.
 - [x] PUBLISHED: DOI 10.5281/zenodo.24462796 + github.com/ScivizLabVienna/purehdc-agent (round 16). Only open stretch item left: TAM vendor-parity port.
 - [x] r13: make-all coverage + examples/demo.sh end-to-end PASS + LIMITATIONS L13-15 + findings §4 predicted-vs-achieved + cli_e2e arity bugfix (ABSTAIN path now truly gated).
+
+---
+
+# E18-v2 → PURE-HDC v2 task plan (lane OPEN 2026-11-24, mandate: operator handover doc purehdc-v2-agent-handover.md)
+
+Pinned base: `6973da6` / tag v1.0.1 / Zenodo DOI 10.5281/zenodo.24477493 (concept ...24462795).
+This clone IS the v2 working repo; origin = github:ScivizLabVienna/purehdc-agent, push directly (no subtree). Shared-repo lane S:/research/e18-purehdc-c frozen at r17.
+
+## Execution order + gates (mandate-verbatim)
+- [x] **P0 Reproduce & audit** — gate MET 2026-11-24: G-A/G-B/SDR PASS; demo 5/5; all headline numbers digit-exact (path_ghrr 1.0000 @ cov 1.0, margins .9416/.9185; seeds-sweep 1.0×8); env matrix + pins in results/e19_phase0_matrix.txt, results/e19_pin.txt; discrepancies: NONE. Regression suite = existing tests (kept).
+- [ ] **P1 Indexed TAM + capacity** — read Overmann TAM C ref first (cloned S:/research/ref/CreatingIntelligence); sparse inverted postings w/ exact verification vs retained flat-scan oracle; cost tables N×sparsity D∈{256..4096}; Clarkson et al. assumptions applied, no unqualified O(1).
+- [ ] **P2 Random indexing semantics** — M(w)+=ΣR(c) bounded int accumulators; held-out vs char-ngram baseline and BM25; negation/paraphrase/polysemy probes; NO unrestricted-language claims; open-domain episodic memory stays documented-negative.
+- [ ] **P3 Inference unification** — typed role bindings + GHRR ordered deduction with derivation traces in runtime API; resonator cleanup comparison (sign/ReLU/poly), bounded iters, abstain fallback.
+- [ ] **P4 Rule discovery / MDL** — typed DSL; exhaustive vs VSA-guided beam; L(h)+L(E|h); 1D-ARC first (Joffe/Eliasmith symbolic core only; neural ranking replaced by transparent scorer + gap reported).
+- [ ] **P5 Group-theoretic world model** — rho(g1g2)=rho(g1)rho(g2) FHRR/GHRR encoders vs learned table vs hybrid residual TAM; noncommuting/inverse/rollout evals; hard-coded coords labeled as prior.
+- [ ] **P6 Metacognition upgrade** — correlated vs independent corruption controls, risk-coverage + calibration, split conformal with stated exchangeability caveats.
+- [ ] **P7 Integrated continuous agent** — single runtime loop + budgets + checkpoint/restart; acceptance trace: explore→learn grounded command→discover rule→plan→act→verify→correct→restart on held-out seeds; endurance run logged.
+- [ ] **P8 Package + revised report** — claims only where measured.
+
+## Standing rules (new)
+Runtime stays pure C11 no-NN-no-LLM; Python strictly scripts/ tooling. Every experiment: hypothesis line, negative control, matched baseline, raw output → results/, fixed seed logged. `make && make test && bash examples/demo.sh` must stay green pre-push. Literature hygiene: verify each reference's actual content before relying (mandate §Literature).

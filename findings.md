@@ -48,3 +48,12 @@
 | Bundled majority recall degrades gracefully | collapses with k; cleanup required (M-1, r1) | NEGATIVE as pre-registered possible outcome — recorded |
 | Ordered path reasoning feasible on GHRR | hop-2 acc=cov=1.0 @D=256 unique keys; D=64 fails (.575) (r9) | MET with a new precondition discovered post-reg: key uniqueness + dimension floor |
 - r17 LEFT-PEEL + ALGEBRAIC VERIFY: ghrr_unbind_left(A,B)=conjtrans(A)·B added (roundtrip <1e-9 m=1/2/4, wrong-factor detected). path_ghrr gate now = margin .02 AND exact start recovery (srec frob-dist to some entity <1e-8) AND value re-check vs stored entity. Result identical headline: acc 1.0000 cov 1.0 @150 chains, min margin .9185 — proves the earlier type-check gate was not carrying accuracy; certification is now algebraic (r17_pathverify_run1.txt). L13 closed.
+
+## E19 r0 — 2026-11-24: Phase 0 reproduction & audit (v2 mandate opened)
+- Cloned published repo -> S:/research/purehdc-v2, pinned 6973da6efdecb64eafb5b6acc0f4b0d1551238ae (tag v1.0.1). Source-tree sha256: see results/e19_pin.txt.
+- Env: Win11 build 26300, i9-11900K 16C, 128 GB, zig cc 22.1.8 (clang-22), GNU Make 4.4.1, MSYS. `make -B` 0 warnings in 10.8 s.
+- G-A / G-B / SDR unit suites PASS (0 fails); examples/demo.sh full PASS; results saved results/e19_*.txt.
+- Reproduction matrix (scripts/run_matrix.py, psutil-sampled RSS <=20 ms): all 9 benchmark binaries rc=0, wall 0.12-24.2 s, RSS max 87.7 MB (cap_curve). Table: results/e19_phase0_matrix.txt.
+- Headline re-check vs RESULTS.md: hop2 path acc 1.0000 @ cov 150/150, mean/min margin .9416/.9185, cue-order separation 1.0 vs .2476 — DIGIT-EXACT; seeds_sweep all rows 1.0000. Discrepancies: NONE. P0 gate MET.
+- Pitfall logged: Win CreateProcess refuses extension-less binaries -> runner copies to .exe before exec (scripts/run_matrix.py).
+- Overmann reference audit input: cloned https://github.com/PeterOvermann/CreatingIntelligence @ depth1 into S:/research/ref/. Licensing verified: SOFTWARE = MIT (attribution notice required on any code reuse); MANUSCRIPT+assets = all-rights-reserved (cite-only, no reproduction in our repo). C reference for TAM: src/c/memory.c + memory.h (+ commandline.c, testing.c). Next (P1): algorithmic diff of its subset/index scheme vs our flat scan before writing tam_index.

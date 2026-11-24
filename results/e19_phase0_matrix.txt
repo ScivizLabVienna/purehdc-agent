@@ -1,0 +1,10 @@
+# host=DESKTOP-GMJ1SAP os=Windows-11-10.0.26300-SP0 py=3.13.14
+subst_qa             289.5 ms  rc=0  rssMax~20ms=    6.1 MB
+hard_qa            14340.7 ms  rc=0  rssMax~20ms=    7.3 MB
+path_ghrr            124.4 ms  rc=0  rssMax~20ms=   10.3 MB
+bench_store         3930.3 ms  rc=0  rssMax~20ms=   21.1 MB
+cap_curve          24211.7 ms  rc=0  rssMax~20ms=   87.7 MB
+gridworld            490.3 ms  rc=0  rssMax~20ms=   23.6 MB
+adversarial_qa      2284.9 ms  rc=0  rssMax~20ms=    5.8 MB
+qa_kg                204.5 ms  rc=0  rssMax~20ms=    4.7 MB
+subst_gates2         210.8 ms  rc=0  rssMax~20ms=    6.1 MB
