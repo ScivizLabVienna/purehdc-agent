@@ -21,8 +21,9 @@ static void fill_set(Set *z, int p) {           /* uniform p-subset, ordered */
     for (int i = 1; i < z->p; i++) { int k = z->a[i], j = i - 1; while (j >= 0 && z->a[j] > k) { z->a[j+1] = z->a[j]; j--; } z->a[j+1] = k; }
 }
 int main(int argc, char **argv) {
-    const int na = 512, pa = 16, nb = 512, pb = 16;
-    int N = argc > 1 ? atoi(argv[1]) : 1000;      /* scaling axis for P1 cost curve */
+    int na = argc > 1 ? atoi(argv[1]) : 512;        /* universe axis for capacity sweep */
+    const int pa = 16, nb = na, pb = pa;
+    int N = argc > 2 ? atoi(argv[2]) : 1000;      /* scaling axis for P1 cost curve */
     printf("tam_bitpair verify seed=88172645463393265 na=%d pa=%d nb=%d pb=%d N=%d\n", na, pa, nb, pb, N);
     Memory *m = Memory_new(na, pa, nb, pb);
     printf("auto threshold T=%d residual=%d\n", Memory_get_threshold(m), Memory_get_residual(m));

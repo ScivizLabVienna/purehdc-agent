@@ -51,7 +51,7 @@ This clone IS the v2 working repo; origin = github:ScivizLabVienna/purehdc-agent
 
 ## Execution order + gates (mandate-verbatim)
 - [x] **P0 Reproduce & audit** — gate MET 2026-11-24: G-A/G-B/SDR PASS; demo 5/5; all headline numbers digit-exact (path_ghrr 1.0000 @ cov 1.0, margins .9416/.9185; seeds-sweep 1.0×8); env matrix + pins in results/e19_phase0_matrix.txt, results/e19_pin.txt; discrepancies: NONE. Regression suite = existing tests (kept).
-- [ ] **P1 Indexed TAM + capacity** — read Overmann TAM C ref first (cloned S:/research/ref/CreatingIntelligence); sparse inverted postings w/ exact verification vs retained flat-scan oracle; cost tables N×sparsity D∈{256..4096}; Clarkson et al. assumptions applied, no unqualified O(1).
+- [x] **P1 Indexed TAM + capacity** — read Overmann TAM C ref first (cloned S:/research/ref/CreatingIntelligence); sparse inverted postings w/ exact verification vs retained flat-scan oracle; cost tables N×sparsity D∈{256..4096}; Clarkson et al. assumptions applied, no unqualified O(1).
 - [ ] **P2 Random indexing semantics** — M(w)+=ΣR(c) bounded int accumulators; held-out vs char-ngram baseline and BM25; negation/paraphrase/polysemy probes; NO unrestricted-language claims; open-domain episodic memory stays documented-negative.
 - [ ] **P3 Inference unification** — typed role bindings + GHRR ordered deduction with derivation traces in runtime API; resonator cleanup comparison (sign/ReLU/poly), bounded iters, abstain fallback.
 - [ ] **P4 Rule discovery / MDL** — typed DSL; exhaustive vs VSA-guided beam; L(h)+L(E|h); 1D-ARC first (Joffe/Eliasmith symbolic core only; neural ranking replaced by transparent scorer + gap reported).
