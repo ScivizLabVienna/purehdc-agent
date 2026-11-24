@@ -1,0 +1,6 @@
+p2c corpus=600 D=1024 nz=32 queries=99 stopset=['is', 'the']
+bm25         syn_adj 30/30 lex 30/30 synx 12/39  synx AUC 0.494 [95%CI 0.481,0.500] (chance=0.500)
+jaccard      syn_adj 30/30 lex 30/30 synx 12/39  synx AUC 0.494 [95%CI 0.481,0.500] (chance=0.500)
+ri_raw       syn_adj 0/30 lex 0/30 synx 6/39  synx AUC 0.667 [95%CI 0.538,0.784] (chance=0.500)
+ri_stopdrop  syn_adj 0/30 lex 1/30 synx 16/39  synx AUC 0.548 [95%CI 0.422,0.681] (chance=0.500)
+ri_idf       syn_adj 0/30 lex 0/30 synx 4/39  synx AUC 0.553 [95%CI 0.432,0.672] (chance=0.500)

@@ -83,3 +83,9 @@ Templated 48-fact grounded corpus, D=1024. nz=4 ctx vectors → all-tie collapse
 
 ## E19 r5 — P2b vocab-rich attempt: INCONCLUSIVE (parked)
 600-fact synthetic corpus + learned synonym bridges: RI arm again returned tied top-1s at 5-decimal precision. Unresolved whether common-word component domination (fixable: idf-style downweight of stopword profiles), a tool bug, or fundamental failure on templated structure. No conclusion drawn; no runtime decision made. Park until P2 gets a dedicated eval pass with per-arm score dumps (next iteration first task).
+
+## E19 r6 — P2c DISCRIMINATING EVAL (tools/p2_ri_eval2.py) — GO for hybrid, with corrected history
+Root cause of r5 ties FOUND+FIXED: profile builder used ±1 *values* as coordinate keys (every doc embedded identically; distinct-scores 1/600). r4 numbers stand (that arm was index-correct); r5 verdict is void (bug), not evidence.
+Design fix: ground-truth queries by construction + tie-break-free statistic (gold-vs-distractor AUC within candidate set, ties=0.5) + bootstrap CI. Corpus 600 grounded-fact sentences, D=1024 nz=32, 99 labeled queries (syn_adj/lex/synx).
+Results: bm25 & jaccard synx AUC **0.494 [0.481,0.500]** = chance (tie-collapse as predicted); **ri_raw 0.667 [0.538,0.784] — CI excludes chance**; ri_stopdrop 0.548 [0.422,0.681]; ri_idf 0.553 [0.432,0.672]. All RI arms ~0/30 on lex/syn_adj queries: **RI must NEVER replace lexical matching — complement only**. stopdrop/idf no better than raw (CIs overlap) → simplest variant wins → C impl minimal (no idf).
+GO decision: implement RI profiles in C runtime AS FALLBACK/TIE-BREAKER after exact-match, exactly mirroring L13's proven "exact-first" architecture. Caveats: synthetic corpus; n≈39 synx queries; bridge sentences hand-templated ("a thing such as n_k"). Effect size 0.667 ≫ chance but far from deployable precision — treat as existence proof for the wiring, not for tuning numbers.
