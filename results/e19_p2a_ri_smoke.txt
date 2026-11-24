@@ -1,0 +1,22 @@
+p2_ri_eval D=1024 facts=48 (synthetic grounded triples, seed 88172645463)
+== bm25
+  Q: which sphere is red?           -> the red sphere is under the table      (margin +0.0000)
+  Q: what is above the shelf?       -> the red cone is above the shelf        (margin +0.0000)
+  Q: the green cube where?          -> the green cube is beside the table     (margin +0.0000)
+  Q: red thing beside door          -> the red cube is beside the door        (margin +1.1510)
+  Q: where is the blue cone?        -> the blue cone is above the table       (margin +0.0000)
+  Q: yellow object under?           -> the yellow sphere is under the table   (margin +0.0000)
+== ri_bundle
+  Q: which sphere is red?           -> the red sphere is under the table      (margin +0.0000)
+  Q: what is above the shelf?       -> the red sphere is under the table      (margin +0.0000)
+  Q: the green cube where?          -> the red sphere is under the table      (margin +0.0000)
+  Q: red thing beside door          -> the red sphere is under the table      (margin +0.0000)
+  Q: where is the blue cone?        -> the red sphere is under the table      (margin +0.0000)
+  Q: yellow object under?           -> the red sphere is under the table      (margin +0.0000)
+== jaccard_exact
+  Q: which sphere is red?           -> the red sphere is under the table      (margin +0.0000)
+  Q: what is above the shelf?       -> the red cone is above the shelf        (margin +0.0000)
+  Q: the green cube where?          -> the green cube is beside the table     (margin +0.0000)
+  Q: red thing beside door          -> the red cube is beside the door        (margin +0.1786)
+  Q: where is the blue cone?        -> the blue cone is above the table       (margin +0.0000)
+  Q: yellow object under?           -> the yellow sphere is under the table   (margin +0.0000)
