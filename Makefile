@@ -24,6 +24,9 @@ $(BIN)/purehdc-agent: src/agent/main.c src/tam/store.c $(HVCORE) | $(BIN)
 $(BIN)/%: experiments/%.c src/tam/store.c $(HVCORE) | $(BIN)
 	$(CC) $(CFLAGS) -o $@ $^ $(LDLIBS)
 
+$(BIN)/test_tambp: tests/test_tambp.c src/store/tam_bitpair.c | $(BIN)
+	$(CC) $(CFLAGS) -Isrc -o $@ $^ $(LDLIBS)
+
 $(BIN):
 	mkdir -p $(BIN)
 

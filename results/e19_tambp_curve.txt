@@ -1,0 +1,45 @@
+== N=1000
+tam_bitpair verify seed=88172645463393265 na=512 pa=16 nb=512 pb=16 N=1000
+auto threshold T=8 residual=512
+recall fails — exact 0/500 | -1 0/500 | -2 0/500 | -3 0/500
+negative-control false positives=0/200 (threshold Y->p>16)
+1000 reads on 1000-assoc memory: 14.00 us/read
+flat-scan oracle: 5.00 us/query (N=1000, 200 probes, hits=200 expected>=probes)
+TAMBp VERIFY PASS (0 gated fails)
+rc 0 rssMax~20ms 11.0 MB
+== N=5000
+tam_bitpair verify seed=88172645463393265 na=512 pa=16 nb=512 pb=16 N=5000
+auto threshold T=8 residual=512
+recall fails — exact 0/2500 | -1 0/2500 | -2 0/2500 | -3 0/2500
+negative-control false positives=0/200 (threshold Y->p>16)
+1000 reads on 5000-assoc memory: 27.00 us/read
+flat-scan oracle: 25.00 us/query (N=5000, 200 probes, hits=200 expected>=probes)
+TAMBp VERIFY PASS (0 gated fails)
+rc 0 rssMax~20ms 15.2 MB
+== N=20000
+tam_bitpair verify seed=88172645463393265 na=512 pa=16 nb=512 pb=16 N=20000
+auto threshold T=8 residual=512
+recall fails — exact 0/10000 | -1 0/10000 | -2 0/10000 | -3 0/10000
+negative-control false positives=0/200 (threshold Y->p>16)
+1000 reads on 20000-assoc memory: 33.00 us/read
+flat-scan oracle: 100.00 us/query (N=20000, 200 probes, hits=200 expected>=probes)
+TAMBp VERIFY PASS (0 gated fails)
+rc 0 rssMax~20ms 16.4 MB
+== N=50000
+tam_bitpair verify seed=88172645463393265 na=512 pa=16 nb=512 pb=16 N=50000
+auto threshold T=8 residual=512
+recall fails — exact 0/25000 | -1 0/25000 | -2 0/25000 | -3 0/25000
+negative-control false positives=22/200 (threshold Y->p>16)
+1000 reads on 50000-assoc memory: 60.00 us/read
+flat-scan oracle: 255.00 us/query (N=50000, 200 probes, hits=200 expected>=probes)
+TAMBp VERIFY FAIL (22 gated fails)
+rc 1 rssMax~20ms 18.1 MB
+== N=100000
+tam_bitpair verify seed=88172645463393265 na=512 pa=16 nb=512 pb=16 N=100000
+auto threshold T=8 residual=512
+recall fails — exact 0/50000 | -1 0/50000 | -2 0/50000 | -3 0/50000
+negative-control false positives=184/200 (threshold Y->p>16)
+1000 reads on 100000-assoc memory: 54.00 us/read
+flat-scan oracle: 525.00 us/query (N=100000, 200 probes, hits=200 expected>=probes)
+TAMBp VERIFY FAIL (184 gated fails)
+rc 1 rssMax~20ms 21.1 MB

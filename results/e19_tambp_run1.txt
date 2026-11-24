@@ -1,0 +1,6 @@
+tam_bitpair verify seed=88172645463393265 na=512 pa=16 nb=512 pb=16 N=1000
+auto threshold T=8 residual=512
+recall fails — exact 0/500 | -1 0/500 | -2 0/500 | -3 0/500
+negative-control false positives=0/200 (threshold Y->p>16)
+1000 reads on 1000-assoc memory: 14.00 us/read
+TAMBp VERIFY PASS (0 gated fails)
