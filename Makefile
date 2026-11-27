@@ -47,3 +47,13 @@ clean:
 test_ri: $(BIN)/test_ri
 $(BIN)/test_ri: tests/test_ri.c src/semantic/ri.c | $(BIN)
 	$(CC) $(CFLAGS) -Isrc -o $@ $^ $(LDLIBS)
+
+e20_sleep: $(BIN)/e20_sleep
+$(BIN)/e20_sleep: experiments/e20_sleep.c src/store/tam_bitpair.c | $(BIN)
+	$(CC) $(CFLAGS) -Isrc -o $@ $^ $(LDLIBS)
+e21_srmu: $(BIN)/e21_srmu
+$(BIN)/e21_srmu: experiments/e21_srmu.c | $(BIN)
+	$(CC) $(CFLAGS) -o $@ $^ $(LDLIBS)
+e21b_dream: $(BIN)/e21b_dream
+$(BIN)/e21b_dream: experiments/e21b_dream.c src/store/tam_bitpair.c | $(BIN)
+	$(CC) $(CFLAGS) -Isrc -o $@ $^ $(LDLIBS)
