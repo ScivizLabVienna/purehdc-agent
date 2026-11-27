@@ -1,0 +1,2 @@
+E20 rep=8 junk=10000 noise=4 N=10400 promoted=50 | ms wake 42.0 sleep 2.0 | R@1 W 200/200 S 200/200 | contam W 0.000 S 0.000 | answered-cue FP W 50/50 S 50/50 | 1-bits W 7523796 S 95391
+E20 rep=8 junk=20000 noise=4 N=20400 promoted=50 | ms wake 91.0 sleep 3.0 | R@1 W 200/200 S 200/200 | contam W 0.000 S 0.000 | answered-cue FP W 50/50 S 50/50 | 1-bits W 8272100 S 95391

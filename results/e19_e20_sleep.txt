@@ -1,0 +1,5 @@
+E20 rep=8 junk=0 noise=4 N=400 promoted=50 | ms wake 2.0 sleep 1.0 | R@1 W 200/200 S 200/200 | contam W 0.000 S 0.000 | answered-cue FP W 50/50 S 50/50 | 1-bits W 95990 S 95990
+E20 rep=8 junk=1000 noise=4 N=1400 promoted=50 | ms wake 16.0 sleep 2.0 | R@1 W 200/200 S 200/200 | contam W 0.000 S 0.000 | answered-cue FP W 50/50 S 50/50 | 1-bits W 2012279 S 95990
+E20 rep=1 junk=0 noise=4 N=50 promoted=0 | ms wake 1.0 sleep 0.0 | R@1 W 200/200 S 0/200 | contam W 0.000 S 0.000 | answered-cue FP W 50/50 S 0/50 | 1-bits W 95990 S 0
+E20 rep=1 junk=1000 noise=4 N=1050 promoted=0 | ms wake 15.0 sleep 0.0 | R@1 W 200/200 S 0/200 | contam W 0.000 S 0.000 | answered-cue FP W 50/50 S 0/50 | 1-bits W 2012279 S 0
+E20 rep=3 junk=4000 noise=4 N=4150 promoted=50 | ms wake 56.0 sleep 2.0 | R@1 W 200/200 S 200/200 | contam W 0.000 S 0.000 | answered-cue FP W 50/50 S 50/50 | 1-bits W 7720148 S 95994
