@@ -43,3 +43,7 @@ clean:
 	rm -rf $(BIN)
 
 .PHONY: all test demo clean
+
+test_ri: $(BIN)/test_ri
+$(BIN)/test_ri: tests/test_ri.c src/semantic/ri.c | $(BIN)
+	$(CC) $(CFLAGS) -Isrc -o $@ $^ $(LDLIBS)

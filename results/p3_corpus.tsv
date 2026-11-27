@@ -1,0 +1,736 @@
+#meta D=1024 NZ=8 NF=600 NQ=99
+F	the c228 n1 is r4 the n15
+F	the c457 n8 is r1 the n43
+F	the c1116 n5 is r6 the n2
+F	the c61 n5 is r3 the n14
+F	the c1034 n38 is r0 the n35
+F	the c407 n45 is r6 the n14
+F	the c919 n37 is r4 the n51
+F	the c13 n48 is r2 the n44
+F	the c865 n21 is r4 the n9
+F	the c440 n48 is r5 the n6
+F	the c189 n24 is r1 the n22
+F	the c704 n38 is r4 the n51
+F	the c88 n46 is r7 the n34
+F	the c255 n59 is r6 the n5
+F	the c1130 n18 is r5 the n36
+F	the c393 n45 is r1 the n2
+F	the c466 n49 is r4 the n5
+F	the c476 n55 is r1 the n24
+F	the c569 n29 is r5 the n10
+F	the c758 n22 is r3 the n42
+F	the c546 n44 is r1 the n38
+F	the c350 n34 is r3 the n10
+F	the c946 n24 is r4 the n59
+F	the c1140 n14 is r5 the n53
+F	the c114 n14 is r0 the n51
+F	the c646 n25 is r4 the n4
+F	the c432 n58 is r5 the n13
+F	the c1022 n25 is r7 the n9
+F	the c542 n8 is r3 the n47
+F	the c1149 n34 is r4 the n47
+F	the c1197 n27 is r6 the n23
+F	the c449 n8 is r7 the n5
+F	the c96 n55 is r1 the n9
+F	the c327 n50 is r6 the n38
+F	the c130 n24 is r6 the n38
+F	the c958 n33 is r4 the n35
+F	the c23 n43 is r1 the n43
+F	the c1099 n48 is r4 the n49
+F	the c696 n7 is r4 the n27
+F	the c323 n29 is r0 the n46
+F	the c539 n32 is r2 the n32
+F	the c217 n55 is r4 the n53
+F	the c1039 n38 is r3 the n9
+F	the c765 n48 is r2 the n34
+F	the c1086 n58 is r0 the n38
+F	the c663 n31 is r0 the n7
+F	the c743 n56 is r4 the n15
+F	the c118 n15 is r1 the n5
+F	the c995 n52 is r1 the n48
+F	the c1090 n49 is r2 the n8
+F	the c973 n35 is r2 the n16
+F	the c1080 n55 is r6 the n13
+F	the c1104 n48 is r3 the n45
+F	the c638 n25 is r5 the n28
+F	the c1059 n28 is r1 the n15
+F	the c460 n4 is r5 the n1
+F	the c1134 n14 is r3 the n0
+F	the c145 n45 is r0 the n14
+F	the c138 n57 is r0 the n55
+F	the c676 n4 is r3 the n17
+F	the c994 n13 is r2 the n46
+F	the c1169 n36 is r7 the n15
+F	the c968 n51 is r6 the n12
+F	the c193 n6 is r6 the n22
+F	the c867 n26 is r7 the n55
+F	the c110 n43 is r1 the n3
+F	the c824 n46 is r5 the n51
+F	the c223 n15 is r3 the n12
+F	the c1098 n28 is r2 the n27
+F	the c375 n17 is r7 the n15
+F	the c154 n28 is r1 the n3
+F	the c1107 n53 is r0 the n5
+F	the c484 n10 is r6 the n31
+F	the c985 n13 is r6 the n57
+F	the c120 n10 is r6 the n0
+F	the c799 n16 is r7 the n18
+F	the c866 n44 is r7 the n9
+F	the c388 n18 is r3 the n3
+F	the c1186 n47 is r0 the n47
+F	the c642 n3 is r0 the n37
+F	the c976 n32 is r2 the n3
+F	the c1040 n5 is r2 the n4
+F	the c139 n43 is r3 the n25
+F	the c245 n56 is r3 the n37
+F	the c81 n39 is r1 the n26
+F	the c1195 n36 is r5 the n59
+F	the c534 n13 is r5 the n15
+F	the c543 n25 is r2 the n42
+F	the c614 n29 is r5 the n59
+F	the c148 n0 is r7 the n39
+F	the c1153 n6 is r1 the n34
+F	the c436 n32 is r4 the n8
+F	the c714 n56 is r1 the n56
+F	the c500 n23 is r4 the n10
+F	the c897 n53 is r4 the n39
+F	the c1083 n0 is r4 the n59
+F	the c212 n56 is r2 the n16
+F	the c236 n56 is r1 the n47
+F	the c1133 n9 is r4 the n18
+F	the c431 n45 is r5 the n13
+F	the c540 n32 is r7 the n16
+F	the c104 n5 is r6 the n53
+F	the c566 n2 is r0 the n21
+F	the c267 n40 is r4 the n10
+F	the c904 n35 is r6 the n35
+F	the c19 n7 is r1 the n56
+F	the c305 n34 is r0 the n53
+F	the c756 n37 is r2 the n27
+F	the c261 n2 is r4 the n23
+F	the c81 n57 is r5 the n13
+F	the c511 n42 is r1 the n22
+F	the c1146 n56 is r6 the n39
+F	the c316 n59 is r3 the n55
+F	the c332 n51 is r2 the n56
+F	the c844 n1 is r2 the n47
+F	the c680 n50 is r6 the n51
+F	the c508 n17 is r2 the n50
+F	the c221 n24 is r0 the n54
+F	the c963 n14 is r3 the n52
+F	the c942 n22 is r4 the n52
+F	the c466 n14 is r0 the n42
+F	the c395 n25 is r5 the n17
+F	the c142 n49 is r4 the n22
+F	the c1043 n25 is r5 the n1
+F	the c236 n56 is r4 the n11
+F	the c1189 n16 is r0 the n6
+F	the c889 n22 is r5 the n27
+F	the c1047 n7 is r6 the n57
+F	the c1180 n12 is r4 the n2
+F	the c893 n0 is r3 the n23
+F	the c883 n4 is r5 the n39
+F	the c642 n42 is r1 the n46
+F	the c615 n32 is r4 the n42
+F	the c836 n20 is r6 the n44
+F	the c605 n35 is r2 the n12
+F	the c861 n42 is r6 the n43
+F	the c356 n39 is r4 the n25
+F	the c1122 n53 is r0 the n19
+F	the c587 n13 is r6 the n50
+F	the c1187 n38 is r5 the n29
+F	the c904 n28 is r3 the n32
+F	the c969 n50 is r2 the n42
+F	the c173 n18 is r5 the n5
+F	the c481 n43 is r4 the n14
+F	the c407 n9 is r0 the n2
+F	the c501 n30 is r1 the n29
+F	the c848 n56 is r3 the n45
+F	the c786 n31 is r6 the n15
+F	the c302 n41 is r0 the n57
+F	the c218 n49 is r6 the n14
+F	the c360 n51 is r7 the n3
+F	the c1141 n15 is r1 the n29
+F	the c273 n51 is r7 the n42
+F	the c1087 n35 is r5 the n48
+F	the c906 n39 is r6 the n53
+F	the c1122 n28 is r2 the n47
+F	the c972 n28 is r4 the n48
+F	the c506 n53 is r4 the n49
+F	the c1067 n31 is r3 the n17
+F	the c900 n4 is r4 the n15
+F	the c556 n21 is r5 the n57
+F	the c1106 n5 is r2 the n9
+F	the c473 n24 is r2 the n45
+F	the c438 n4 is r6 the n26
+F	the c677 n34 is r7 the n26
+F	the c127 n13 is r6 the n24
+F	the c1196 n44 is r0 the n54
+F	the c1179 n24 is r7 the n0
+F	the c720 n19 is r6 the n54
+F	the c858 n34 is r3 the n31
+F	the c449 n17 is r6 the n31
+F	the c59 n24 is r5 the n42
+F	the c828 n46 is r2 the n53
+F	the c957 n58 is r2 the n39
+F	the c1093 n1 is r6 the n37
+F	the c1155 n42 is r0 the n5
+F	the c877 n8 is r7 the n11
+F	the c102 n16 is r6 the n20
+F	the c433 n29 is r5 the n21
+F	the c776 n17 is r6 the n16
+F	the c167 n30 is r0 the n47
+F	the c1104 n3 is r5 the n14
+F	the c140 n49 is r0 the n48
+F	the c63 n15 is r3 the n53
+F	the c41 n39 is r2 the n15
+F	the c258 n30 is r1 the n36
+F	the c446 n29 is r4 the n49
+F	the c755 n10 is r1 the n49
+F	the c335 n19 is r1 the n37
+F	the c52 n59 is r4 the n36
+F	the c768 n25 is r3 the n4
+F	the c497 n6 is r4 the n54
+F	the c247 n50 is r0 the n22
+F	the c1091 n27 is r5 the n4
+F	the c1036 n41 is r5 the n0
+F	the c860 n52 is r7 the n6
+F	the c887 n23 is r7 the n45
+F	the c313 n27 is r2 the n46
+F	the c1068 n41 is r4 the n39
+F	the c1102 n49 is r7 the n29
+F	the c892 n52 is r4 the n20
+F	the c502 n53 is r1 the n17
+F	the c923 n15 is r7 the n36
+F	the c776 n21 is r0 the n31
+F	the c665 n11 is r7 the n13
+F	the c726 n51 is r4 the n21
+F	the c572 n56 is r4 the n35
+F	the c20 n33 is r3 the n5
+F	the c494 n46 is r6 the n31
+F	the c1137 n48 is r3 the n44
+F	the c975 n41 is r7 the n28
+F	the c35 n5 is r4 the n14
+F	the c828 n44 is r3 the n19
+F	the c1191 n23 is r7 the n35
+F	the c1087 n22 is r6 the n47
+F	the c1127 n21 is r5 the n44
+F	the c929 n17 is r4 the n16
+F	the c472 n7 is r3 the n20
+F	the c244 n47 is r2 the n12
+F	the c443 n47 is r7 the n17
+F	the c1074 n38 is r4 the n6
+F	the c397 n18 is r3 the n23
+F	the c367 n19 is r0 the n45
+F	the c1093 n8 is r4 the n2
+F	the c111 n35 is r4 the n44
+F	the c258 n40 is r7 the n6
+F	the c25 n36 is r4 the n30
+F	the c980 n28 is r5 the n11
+F	the c105 n16 is r7 the n7
+F	the c133 n25 is r7 the n4
+F	the c1181 n40 is r0 the n9
+F	the c305 n51 is r4 the n5
+F	the c508 n7 is r6 the n38
+F	the c462 n49 is r6 the n28
+F	the c906 n19 is r6 the n19
+F	the c1164 n39 is r0 the n39
+F	the c203 n48 is r3 the n40
+F	the c432 n16 is r1 the n10
+F	the c491 n11 is r1 the n10
+F	the c5 n26 is r7 the n44
+F	the c962 n18 is r0 the n14
+F	the c590 n45 is r4 the n44
+F	the c929 n4 is r3 the n59
+F	the c541 n50 is r3 the n27
+F	the c235 n34 is r3 the n41
+F	the c305 n58 is r4 the n52
+F	the c291 n4 is r0 the n10
+F	the c629 n38 is r4 the n28
+F	the c254 n29 is r4 the n44
+F	the c824 n17 is r7 the n28
+F	the c164 n38 is r0 the n56
+F	the c884 n47 is r5 the n38
+F	the c512 n1 is r1 the n14
+F	the c1178 n37 is r0 the n48
+F	the c551 n36 is r0 the n48
+F	the c358 n30 is r7 the n58
+F	the c569 n11 is r6 the n40
+F	the c1007 n5 is r7 the n22
+F	the c836 n21 is r5 the n42
+F	the c214 n54 is r2 the n21
+F	the c843 n44 is r7 the n18
+F	the c820 n52 is r0 the n29
+F	the c180 n20 is r4 the n20
+F	the c237 n49 is r6 the n55
+F	the c1053 n52 is r0 the n42
+F	the c1111 n29 is r6 the n3
+F	the c384 n33 is r5 the n39
+F	the c1020 n40 is r7 the n48
+F	the c105 n13 is r4 the n35
+F	the c268 n59 is r4 the n28
+F	the c992 n7 is r0 the n40
+F	the c490 n45 is r2 the n19
+F	the c1128 n0 is r6 the n5
+F	the c460 n53 is r1 the n29
+F	the c240 n41 is r2 the n31
+F	the c597 n32 is r4 the n26
+F	the c988 n30 is r3 the n29
+F	the c1128 n9 is r6 the n12
+F	the c1040 n47 is r2 the n55
+F	the c142 n17 is r6 the n21
+F	the c1039 n17 is r0 the n18
+F	the c611 n53 is r7 the n55
+F	the c304 n28 is r7 the n22
+F	the c680 n35 is r6 the n29
+F	the c659 n55 is r3 the n44
+F	the c489 n36 is r6 the n14
+F	the c841 n2 is r5 the n47
+F	the c968 n45 is r6 the n24
+F	the c311 n31 is r0 the n8
+F	the c1028 n37 is r5 the n55
+F	the c205 n55 is r7 the n6
+F	the c1077 n58 is r7 the n0
+F	the c295 n26 is r2 the n4
+F	the c961 n50 is r4 the n21
+F	the c814 n41 is r1 the n54
+F	the c672 n54 is r6 the n20
+F	the c999 n55 is r0 the n39
+F	the c140 n15 is r4 the n14
+F	the c185 n27 is r1 the n48
+F	the c205 n28 is r2 the n44
+F	the c613 n57 is r0 the n2
+F	the c664 n50 is r0 the n18
+F	the c734 n23 is r6 the n9
+F	the c500 n33 is r6 the n36
+F	the c368 n10 is r2 the n5
+F	the c783 n39 is r3 the n31
+F	the c1194 n9 is r3 the n29
+F	the c520 n29 is r4 the n42
+F	the c19 n57 is r7 the n57
+F	the c589 n43 is r2 the n4
+F	the c904 n22 is r4 the n40
+F	the c868 n44 is r4 the n29
+F	the c618 n12 is r6 the n54
+F	the c989 n6 is r3 the n24
+F	the c1171 n22 is r4 the n44
+F	the c604 n1 is r6 the n17
+F	the c16 n36 is r0 the n58
+F	the c1017 n53 is r4 the n49
+F	the c471 n38 is r5 the n14
+F	the c389 n39 is r4 the n43
+F	the c280 n40 is r1 the n57
+F	the c80 n19 is r7 the n2
+F	the c1186 n23 is r2 the n5
+F	the c604 n20 is r6 the n11
+F	the c411 n8 is r5 the n33
+F	the c1027 n58 is r4 the n53
+F	the c336 n16 is r7 the n51
+F	the c604 n47 is r5 the n51
+F	the c235 n29 is r1 the n9
+F	the c462 n55 is r6 the n54
+F	the c1141 n23 is r1 the n50
+F	the c808 n0 is r4 the n34
+F	the c253 n29 is r5 the n43
+F	the c536 n37 is r6 the n52
+F	the c760 n6 is r3 the n30
+F	the c51 n39 is r5 the n58
+F	the c453 n41 is r1 the n40
+F	the c950 n58 is r4 the n41
+F	the c836 n7 is r2 the n2
+F	the c76 n19 is r7 the n7
+F	the c199 n15 is r2 the n24
+F	the c929 n23 is r6 the n37
+F	the c316 n56 is r6 the n41
+F	the c202 n53 is r7 the n39
+F	the c835 n17 is r0 the n44
+F	the c758 n13 is r7 the n28
+F	the c483 n54 is r5 the n6
+F	the c752 n34 is r5 the n3
+F	the c815 n17 is r3 the n7
+F	the c931 n5 is r3 the n41
+F	the c43 n3 is r5 the n15
+F	the c257 n50 is r3 the n4
+F	the c1135 n13 is r3 the n52
+F	the c477 n21 is r2 the n50
+F	the c5 n17 is r2 the n8
+F	the c1106 n16 is r2 the n7
+F	the c52 n8 is r0 the n22
+F	the c487 n37 is r5 the n1
+F	the c356 n16 is r0 the n8
+F	the c862 n33 is r1 the n47
+F	the c130 n30 is r7 the n49
+F	the c741 n32 is r1 the n28
+F	the c1031 n14 is r0 the n46
+F	the c1067 n19 is r7 the n41
+F	the c63 n3 is r7 the n54
+F	the c822 n27 is r1 the n31
+F	the c908 n4 is r1 the n20
+F	the c303 n4 is r2 the n17
+F	the c1198 n35 is r5 the n24
+F	the c1086 n18 is r7 the n32
+F	the c881 n6 is r1 the n54
+F	the c1129 n46 is r3 the n27
+F	the c924 n56 is r3 the n26
+F	the c694 n52 is r7 the n25
+F	the c851 n46 is r1 the n20
+F	the c874 n20 is r4 the n23
+F	the c312 n43 is r7 the n4
+F	the c186 n53 is r1 the n5
+F	the c884 n6 is r5 the n51
+F	the c266 n35 is r0 the n37
+F	the c1150 n35 is r5 the n42
+F	the c250 n26 is r5 the n55
+F	the c866 n55 is r0 the n18
+F	the c639 n22 is r1 the n36
+F	the c1039 n13 is r2 the n42
+F	the c987 n14 is r1 the n22
+F	the c1139 n23 is r1 the n48
+F	the c570 n36 is r3 the n51
+F	the c878 n54 is r0 the n38
+F	the c547 n1 is r2 the n17
+F	the c632 n58 is r5 the n22
+F	the c12 n11 is r2 the n36
+F	the c820 n4 is r2 the n47
+F	the c62 n5 is r3 the n24
+F	the c859 n29 is r5 the n10
+F	the c757 n19 is r5 the n49
+F	the c1162 n38 is r1 the n56
+F	the c107 n9 is r2 the n48
+F	the c101 n43 is r1 the n17
+F	the c907 n42 is r6 the n31
+F	the c905 n26 is r4 the n13
+F	the c1049 n7 is r5 the n27
+F	the c227 n18 is r7 the n33
+F	the c631 n2 is r3 the n25
+F	the c112 n0 is r3 the n19
+F	the c432 n49 is r2 the n48
+F	the c523 n18 is r5 the n7
+F	the c15 n31 is r6 the n11
+F	the c264 n24 is r3 the n32
+F	the c1144 n53 is r5 the n4
+F	the c813 n55 is r0 the n27
+F	the c38 n29 is r1 the n55
+F	the c641 n36 is r6 the n36
+F	the c828 n45 is r6 the n18
+F	the c235 n25 is r0 the n20
+F	the c351 n51 is r7 the n53
+F	the c741 n5 is r6 the n54
+F	the c216 n15 is r6 the n37
+F	the c820 n33 is r1 the n25
+F	the c635 n47 is r5 the n14
+F	the c682 n49 is r2 the n4
+F	the c1045 n40 is r1 the n33
+F	the c1044 n12 is r5 the n22
+F	the c302 n15 is r1 the n9
+F	the c524 n12 is r2 the n38
+F	the c313 n48 is r1 the n11
+F	the c1011 n29 is r7 the n43
+F	the c1156 n41 is r5 the n55
+F	the c647 n9 is r7 the n4
+F	the c960 n28 is r4 the n50
+F	the c562 n37 is r0 the n22
+F	the c1039 n4 is r4 the n29
+F	the c925 n2 is r0 the n23
+F	the c587 n4 is r1 the n39
+F	the c1038 n24 is r7 the n37
+F	the c1135 n50 is r0 the n28
+F	the c1170 n41 is r3 the n20
+F	the c974 n32 is r2 the n3
+F	the c922 n6 is r5 the n45
+F	the c172 n32 is r2 the n2
+F	the c507 n45 is r7 the n28
+F	the c1073 n33 is r2 the n23
+F	the c763 n58 is r4 the n24
+F	the c837 n49 is r5 the n43
+F	the c107 n50 is r5 the n4
+F	the c675 n6 is r6 the n18
+F	the c516 n46 is r2 the n21
+F	the c166 n37 is r2 the n58
+F	the c716 n19 is r6 the n8
+F	the c173 n19 is r6 the n41
+F	the c672 n52 is r2 the n42
+F	the c1078 n5 is r6 the n32
+F	the c741 n1 is r5 the n19
+F	the c369 n13 is r5 the n49
+F	the c995 n12 is r3 the n8
+F	the c317 n4 is r4 the n54
+F	the c207 n32 is r0 the n42
+F	the c689 n56 is r2 the n38
+F	the c771 n9 is r2 the n11
+F	the c339 n46 is r7 the n2
+F	the c841 n23 is r3 the n28
+F	the c583 n48 is r7 the n14
+F	the c1093 n15 is r4 the n51
+F	the c960 n57 is r3 the n23
+F	the c1168 n28 is r7 the n49
+F	the c577 n49 is r6 the n32
+F	the c1080 n26 is r2 the n52
+F	the c408 n51 is r2 the n55
+F	the c512 n3 is r7 the n55
+F	the c760 n35 is r1 the n45
+F	the c1056 n54 is r1 the n18
+F	the c171 n48 is r2 the n17
+F	the c920 n57 is r2 the n53
+F	the c895 n5 is r3 the n52
+F	the c923 n56 is r5 the n59
+F	the c54 n26 is r0 the n25
+F	the c1028 n23 is r3 the n24
+F	the c167 n23 is r3 the n1
+F	the c652 n59 is r1 the n53
+F	the c686 n50 is r2 the n8
+F	the c78 n18 is r7 the n44
+F	the c284 n48 is r7 the n28
+F	the c10 n57 is r1 the n1
+F	the c524 n13 is r2 the n35
+F	the c1080 n27 is r1 the n49
+F	the c590 n15 is r4 the n7
+F	the c97 n15 is r6 the n40
+F	the c936 n4 is r1 the n53
+F	the c1023 n38 is r0 the n40
+F	the c1055 n36 is r3 the n45
+F	the c294 n18 is r6 the n0
+F	the c722 n15 is r6 the n11
+F	the c175 n33 is r5 the n4
+F	the c1077 n34 is r0 the n24
+F	the c962 n2 is r6 the n23
+F	the c519 n47 is r0 the n22
+F	the c138 n22 is r3 the n46
+F	the c212 n49 is r5 the n8
+F	the c90 n22 is r5 the n52
+F	the c358 n53 is r7 the n44
+F	the c980 n40 is r2 the n51
+F	the c276 n4 is r7 the n2
+F	the c600 n12 is r0 the n50
+F	the c408 n56 is r0 the n20
+F	the c635 n32 is r6 the n52
+F	the c1112 n30 is r4 the n2
+F	the c391 n18 is r5 the n55
+F	the c97 n55 is r5 the n17
+F	the c254 n51 is r5 the n27
+F	the c819 n47 is r7 the n57
+F	the c791 n21 is r2 the n31
+F	the c1018 n23 is r4 the n51
+F	the c169 n46 is r6 the n5
+F	the c881 n38 is r2 the n34
+F	the c601 n20 is r1 the n5
+F	the c671 n42 is r4 the n19
+F	the c913 n38 is r6 the n10
+F	the c909 n22 is r7 the n2
+F	the c722 n39 is r6 the n17
+F	the c117 n4 is r6 the n23
+F	the c1050 n51 is r2 the n1
+F	the c292 n54 is r7 the n2
+F	the c258 n4 is r3 the n49
+F	the c750 n23 is r6 the n36
+F	the c66 n38 is r2 the n43
+F	the c921 n23 is r5 the n28
+F	the c157 n36 is r2 the n33
+F	the c751 n25 is r5 the n41
+F	the c570 n15 is r1 the n1
+F	the c381 n31 is r6 the n58
+F	the c1150 n7 is r4 the n49
+F	the c533 n45 is r7 the n13
+F	the c584 n44 is r7 the n12
+F	the c251 n8 is r1 the n28
+F	the c353 n57 is r7 the n5
+F	the c654 n42 is r5 the n45
+F	the c132 n35 is r4 the n57
+F	the c614 n54 is r2 the n45
+F	the c356 n50 is r5 the n32
+F	the c459 n7 is r3 the n50
+F	the c284 n15 is r7 the n1
+F	the c739 n35 is r5 the n29
+F	the c1129 n8 is r1 the n4
+F	the c633 n25 is r7 the n33
+F	the c841 n49 is r6 the n52
+F	the c1177 n4 is r2 the n20
+F	the c151 n28 is r7 the n43
+F	the c1059 n22 is r2 the n56
+F	the c1129 n40 is r2 the n49
+F	the c264 n27 is r0 the n53
+F	the c254 n33 is r2 the n19
+F	the c337 n10 is r5 the n59
+F	the c461 n22 is r4 the n54
+F	the c161 n16 is r3 the n40
+F	the c1128 n17 is r2 the n40
+F	the c620 n39 is r1 the n32
+F	the c345 n37 is r2 the n10
+F	the c691 n53 is r0 the n52
+F	the c58 n5 is r0 the n41
+F	the c1181 n16 is r3 the n49
+F	the c1171 n26 is r0 the n31
+F	the c1117 n18 is r4 the n30
+F	the c501 n51 is r6 the n19
+F	the c928 n4 is r0 the n10
+F	the c900 n26 is r7 the n29
+F	the c417 n21 is r2 the n20
+F	the c653 n46 is r5 the n25
+F	the c267 n48 is r5 the n32
+F	the c1150 n6 is r5 the n15
+F	the c955 n7 is r4 the n28
+F	the c507 n9 is r1 the n3
+F	the c594 n24 is r6 the n15
+F	the c327 n52 is r5 the n59
+F	the c1183 n46 is r5 the n12
+F	the c326 n31 is r7 the n31
+F	the c631 n31 is r0 the n5
+F	the c805 n32 is r7 the n15
+F	the c440 n37 is r5 the n3
+F	the c103 n18 is r7 the n38
+F	the c963 n18 is r0 the n54
+F	the c220 n27 is r2 the n56
+F	the c541 n46 is r5 the n48
+F	the c825 n23 is r0 the n25
+F	the c104 n36 is r3 the n23
+F	the c1133 n18 is r1 the n24
+F	the c1032 n28 is r4 the n52
+F	the c243 n8 is r1 the n25
+F	the c764 n50 is r5 the n35
+F	the c748 n48 is r2 the n12
+F	the c1042 n25 is r0 the n2
+F	the c79 n8 is r5 the n51
+F	the c970 n33 is r7 the n9
+F	the c1055 n8 is r5 the n59
+F	the c652 n10 is r6 the n39
+F	the c612 n37 is r5 the n32
+F	the c1043 n34 is r7 the n45
+F	the c1152 n19 is r7 the n52
+F	the c34 n23 is r5 the n43
+F	the c224 n26 is r4 the n50
+F	the c54 n38 is r7 the n16
+B	a thing such as n13
+B	a thing such as n2
+B	a thing such as n20
+B	a thing such as n23
+B	a thing such as n25
+B	a thing such as n26
+B	a thing such as n27
+B	a thing such as n3
+B	a thing such as n32
+B	a thing such as n34
+B	a thing such as n37
+B	a thing such as n4
+B	a thing such as n41
+B	a thing such as n5
+B	a thing such as n52
+B	a thing such as n55
+B	a thing such as n6
+B	a thing such as n9
+B	a object such as n0
+B	a object such as n11
+B	a object such as n17
+B	a object such as n2
+B	a object such as n21
+B	a object such as n23
+B	a object such as n24
+B	a object such as n29
+B	a object such as n32
+B	a object such as n35
+B	a object such as n38
+B	a object such as n39
+B	a object such as n43
+B	a object such as n5
+B	a object such as n51
+B	a object such as n58
+B	a object such as n59
+B	a object such as n8
+Q	syn_adj	366	-	which thing is c908
+Q	syn_adj	130	-	which thing is c883
+Q	syn_adj	336	-	which thing is c453
+Q	syn_adj	580	-	which thing is c220
+Q	syn_adj	64	-	which thing is c867
+Q	syn_adj	558	-	which thing is c58
+Q	syn_adj	25	-	which thing is c646
+Q	syn_adj	523	-	which thing is c750
+Q	syn_adj	2	-	which thing is c1116
+Q	syn_adj	40	-	which thing is c539
+Q	syn_adj	17	-	which thing is c476
+Q	syn_adj	264	-	which thing is c1053
+Q	syn_adj	121	-	which thing is c395
+Q	syn_adj	195	-	which thing is c860
+Q	syn_adj	3	-	which thing is c61
+Q	syn_adj	487	-	which thing is c936
+Q	syn_adj	253	-	which thing is c1178
+Q	syn_adj	292	-	which thing is c295
+Q	syn_adj	194	-	which thing is c1036
+Q	syn_adj	210	-	which thing is c975
+Q	syn_adj	545	-	which thing is c1177
+Q	syn_adj	563	-	which thing is c928
+Q	syn_adj	306	-	which thing is c1194
+Q	syn_adj	100	-	which thing is c540
+Q	syn_adj	30	-	which thing is c1197
+Q	syn_adj	246	-	which thing is c291
+Q	syn_adj	294	-	which thing is c814
+Q	syn_adj	41	-	which thing is c217
+Q	syn_adj	165	-	which thing is c127
+Q	syn_adj	350	-	which thing is c43
+Q	lex	75	-	the c799 n16
+Q	lex	365	-	the c822 n27
+Q	lex	495	-	the c519 n47
+Q	lex	156	-	the c972 n28
+Q	lex	178	-	the c433 n29
+Q	lex	340	-	the c199 n15
+Q	lex	347	-	the c752 n34
+Q	lex	591	-	the c970 n33
+Q	lex	47	-	the c118 n15
+Q	lex	69	-	the c375 n17
+Q	lex	417	-	the c216 n15
+Q	lex	11	-	the c704 n38
+Q	lex	523	-	the c750 n23
+Q	lex	400	-	the c905 n26
+Q	lex	257	-	the c1007 n5
+Q	lex	578	-	the c103 n18
+Q	lex	349	-	the c931 n5
+Q	lex	1	-	the c457 n8
+Q	lex	561	-	the c1117 n18
+Q	lex	366	-	the c908 n4
+Q	lex	165	-	the c127 n13
+Q	lex	192	-	the c247 n50
+Q	lex	102	-	the c566 n2
+Q	lex	36	-	the c23 n43
+Q	lex	141	-	the c969 n50
+Q	lex	471	-	the c171 n48
+Q	lex	207	-	the c20 n33
+Q	lex	457	-	the c689 n56
+Q	lex	250	-	the c164 n38
+Q	lex	307	-	the c520 n29
+Q	synx	159	0,46,159	which thing is r4 the n15
+Q	synx	6,511	6,11,462,511	which thing is r4 the n51
+Q	synx	27	27,76,591	which thing is r7 the n9
+Q	synx	32	32,328,423	which thing is r1 the n9
+Q	synx	268	35,206,268	which thing is r4 the n35
+Q	synx	514	47,377,514	which thing is r1 the n5
+Q	synx	576	61,69,576	which thing is r7 the n15
+Q	synx	64,468	64,281,468	which thing is r7 the n55
+Q	synx	570	65,70,570	which thing is r1 the n3
+Q	synx	378	66,327,378,590	which thing is r5 the n51
+Q	synx	81,292	81,292,309,420	which thing is r2 the n4
+Q	synx	572	85,88,474,551,572,592	which thing is r5 the n59
+Q	synx	87,384,450	87,141,384,450	which thing is r2 the n42
+Q	synx	580	113,547,580	which thing is r2 the n56
+Q	synx	392	114,155,392	which thing is r2 the n47
+Q	synx	352,473	118,352,473	which thing is r3 the n52
+Q	synx	264,456	120,264,456	which thing is r0 the n42
+Q	synx	211	143,211,297	which thing is r4 the n14
+Q	synx	144,589	144,300,589	which thing is r0 the n2
+Q	synx	329,416	168,312,329,416	which thing is r6 the n54
+Q	synx	341	174,341,417	which thing is r6 the n37
+Q	synx	181	181,318,419	which thing is r5 the n14
+Q	synx	253	182,253,254	which thing is r0 the n48
+Q	synx	191,455	191,455,552	which thing is r4 the n54
+Q	synx	430	192,356,430,495	which thing is r0 the n22
+Q	synx	193	193,409,444,492	which thing is r5 the n4
+Q	synx	195,290	195,225,290	which thing is r7 the n6
+Q	synx	210,345	210,249,345,440,481	which thing is r7 the n28
+Q	synx	229,428	229,376,428	which thing is r7 the n4
+Q	synx	239	239,480,499	which thing is r7 the n44
+Q	synx	382	280,301,382	which thing is r0 the n18
+Q	synx	289,381,427	289,381,427,506	which thing is r5 the n55
+Q	synx	523	303,412,523	which thing is r6 the n36
+Q	synx	501	321,459,501,517,521	which thing is r7 the n2
+Q	synx	323	323,407,491	which thing is r6 the n11
+Q	synx	597	332,443,597	which thing is r5 the n43
+Q	synx	333,504	333,504,544	which thing is r6 the n52
+Q	synx	367	367,389,471	which thing is r2 the n17
+Q	synx	594	538,567,594	which thing is r5 the n32
