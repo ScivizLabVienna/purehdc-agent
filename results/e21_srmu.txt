@@ -1,0 +1,15 @@
+E21 SRMU D=512 T=4000 gamma=0.98 flips=0
+  ADD    final mean-sim 0.159   ||M|| 957525.5
+  DECAY  final mean-sim 0.170   ||M|| 11785.0
+  GATE   final mean-sim 0.264   ||M|| 184731.9
+  SRMU   final mean-sim 0.233   ||M|| 2998.3
+E21 SRMU D=512 T=4000 gamma=0.98 flips=8
+  ADD    final mean-sim 0.062   ||M|| 796108.7
+  DECAY  final mean-sim 0.165   ||M|| 10934.5
+  GATE   final mean-sim 0.168   ||M|| 213245.4
+  SRMU   final mean-sim 0.254   ||M|| 2480.5
+E21 SRMU D=512 T=12000 gamma=0.98 flips=8
+  ADD    final mean-sim 0.144   ||M|| 1949529.6
+  DECAY  final mean-sim 0.172   ||M|| 11348.5
+  GATE   final mean-sim 0.194   ||M|| 545821.0
+  SRMU   final mean-sim 0.233   ||M|| 2440.0
